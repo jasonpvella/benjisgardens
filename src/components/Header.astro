@@ -1,0 +1,102 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/hedging', label: 'Hedging' },
+  { href: '/services', label: 'Services' },
+  { href: '/care-plans', label: 'Care Plans' },
+  { href: '/gallery', label: 'Gallery' },
+  { href: '/about', label: 'About' },
+  { href: '/areas', label: 'Areas' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="fixed top-0 left-0 right-0 z-40 bg-white/96 backdrop-blur-sm border-b border-warm-gray">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+
+      <!-- Logo -->
+      <a href="/" class="flex-shrink-0">
+        <img src="/logo.png" alt="Benji's Gardens" class="h-10 lg:h-12 w-auto" width="120" height="48" />
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-7" aria-label="Main navigation">
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            class={`font-sans text-sm font-medium transition-colors hover:text-green-deep ${
+              currentPath === link.href ? 'text-green-deep' : 'text-charcoal/60'
+            }`}
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Desktop right -->
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="tel:0493038733" class="font-sans text-sm font-medium text-charcoal hover:text-green-deep transition-colors">
+          0493 038 733
+        </a>
+        <a
+          href="/contact#quote"
+          class="bg-green-deep text-white font-sans text-sm font-medium px-5 py-2.5 hover:bg-green-mid transition-colors"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" class="lg:hidden p-2 -mr-2 text-charcoal" aria-label="Open menu" aria-expanded="false">
+        <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-warm-gray">
+    <nav class="px-4 py-4 space-y-0.5" aria-label="Mobile navigation">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class="block py-3 font-sans text-sm font-medium text-charcoal hover:text-green-deep transition-colors border-b border-warm-gray/60 last:border-0"
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+    <div class="px-4 pb-4">
+      <a href="tel:0493038733" class="flex items-center gap-2 font-sans text-sm font-medium text-green-deep">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+        0493 038 733
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-16 lg:h-20"></div>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden');
+    iconOpen?.classList.toggle('hidden', !isOpen);
+    iconClose?.classList.toggle('hidden', isOpen);
+    btn?.setAttribute('aria-expanded', String(!isOpen));
+  });
+</script>

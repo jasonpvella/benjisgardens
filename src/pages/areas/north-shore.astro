@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Benji's Gardens — Upper North Shore Sydney",
+  "description": "Garden maintenance and hedge trimming specialists serving Killara, Pymble, St Ives, Wahroonga, Gordon, Lindfield, Turramurra and surrounding Upper North Shore suburbs.",
+  "telephone": "0493038733",
+  "url": "https://benjisgardens.com.au/areas/north-shore",
+  "areaServed": [
+    { "@type": "City", "name": "Killara" },
+    { "@type": "City", "name": "Pymble" },
+    { "@type": "City", "name": "St Ives" },
+    { "@type": "City", "name": "Wahroonga" },
+    { "@type": "City", "name": "Gordon" },
+    { "@type": "City", "name": "Lindfield" },
+    { "@type": "City", "name": "Turramurra" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "NSW",
+    "addressCountry": "AU"
+  }
+};
+---
+
+<Layout
+  title="Garden Maintenance & Hedge Trimming Upper North Shore Sydney — Killara, Pymble, St Ives | Benji's Gardens"
+  description="Expert hedge trimming and garden maintenance across Sydney's Upper North Shore. Serving Killara, Pymble, St Ives, Wahroonga, Gordon, Lindfield and Turramurra. Formal hedging specialists. Free quote."
+  image="/images/benji-hedging-large-hedge.jpg"
+  schema={schema}
+>
+
+  <!-- HERO -->
+  <section class="relative min-h-[60vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/images/north-shore-estate-hedge-wall.jpg"
+        alt="Immaculate leighton green hedge wall at an Upper North Shore estate — Benji's Gardens"
+        class="w-full h-full object-cover"
+        width="1920"
+        height="1080"
+        fetchpriority="high"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-charcoal/88 via-charcoal/60 to-charcoal/15"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-xl">
+        <a href="/areas" class="inline-flex items-center gap-1.5 font-sans text-xs text-white/45 hover:text-white transition-colors mb-6">
+          ← All Areas
+        </a>
+        <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Sydney Service Area</p>
+        <h1 class="font-serif text-5xl sm:text-6xl text-white mb-5 leading-tight">Upper North Shore</h1>
+        <p class="font-sans text-xs text-white/50 mb-6 tracking-wide">Killara · Pymble · St Ives · Wahroonga · Gordon · Lindfield · Turramurra</p>
+        <p class="font-sans text-base text-ivory/75 leading-relaxed mb-8">
+          The prestige-hedging heartland of Sydney. Large blocks, mature formal gardens, and a neighbourhood standard that demands consistent, immaculate maintenance.
+        </p>
+        <a href="/contact#quote" class="inline-flex items-center gap-2 bg-brass text-white font-sans font-medium text-sm px-8 py-4 hover:bg-brass-light transition-colors">
+          Get a Quote for North Shore
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NORTH SHORE APPROACH -->
+  <section class="bg-ivory py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div>
+          <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Our Approach</p>
+          <h2 class="font-serif text-3xl lg:text-4xl text-charcoal mb-6 leading-tight">
+            The Manicured Aesthetic That Defines These Streets
+          </h2>
+          <p class="font-sans text-sm text-charcoal/65 leading-relaxed mb-4">
+            The Upper North Shore is Sydney's formal garden suburb heartland. Properties in Killara, Pymble, St Ives, and Wahroonga typically have large blocks with established formal hedges, mature landscaping, and a manicured street presence that's part of the neighbourhood's identity.
+          </p>
+          <p class="font-sans text-sm text-charcoal/65 leading-relaxed mb-4">
+            These properties need consistent, high-quality maintenance — not occasional attention. A hedge that's pristine in spring and shapeless by autumn isn't good enough here. Regular trimming, seasonal reductions at the right time, and a service that understands what a formal garden needs.
+          </p>
+          <p class="font-sans text-sm text-charcoal/65 leading-relaxed">
+            We offer monthly and fortnightly care plans specifically suited to Upper North Shore properties — so your garden maintains its standard year-round without you having to think about it.
+          </p>
+          <div class="mt-6 flex gap-4">
+            <a href="/care-plans" class="inline-flex items-center gap-2 bg-green-deep text-white font-sans font-medium text-sm px-6 py-3 hover:bg-green-mid transition-colors">
+              View Care Plans
+            </a>
+            <a href="/contact#quote" class="inline-flex items-center gap-2 border border-warm-gray text-charcoal font-sans font-medium text-sm px-6 py-3 hover:border-green-deep hover:text-green-deep transition-colors">
+              Get a Quote
+            </a>
+          </div>
+        </div>
+        <div class="aspect-[4/5] overflow-hidden">
+          <img
+            src="/images/north-shore-estate-stepping-stones.jpg"
+            alt="Immaculate formal garden with stepping stone path — Upper North Shore estate"
+            class="w-full h-full object-cover"
+            width="700"
+            height="875"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBURBS -->
+  <section class="bg-white py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Suburbs We Serve</p>
+        <h2 class="font-serif text-3xl text-charcoal">Upper North Shore Coverage</h2>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        {['Killara', 'Pymble', 'St Ives', 'Wahroonga', 'Gordon', 'Lindfield', 'Turramurra', 'Warrawee', 'Roseville', 'Chatswood', 'Lane Cove', 'Artarmon'].map(suburb => (
+          <div class="p-4 border border-warm-gray text-center">
+            <p class="font-sans text-sm text-charcoal/70">{suburb}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-charcoal py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-4xl text-white mb-4">Get a Quote for Your North Shore Property</h2>
+      <p class="font-sans text-base text-white/55 mb-8 max-w-lg mx-auto">
+        Tell us your suburb, your garden, and what you need. We'll get back to you same day.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact#quote" class="inline-flex items-center justify-center gap-2 bg-brass text-white font-sans font-medium text-sm px-8 py-4 hover:bg-brass-light transition-colors">
+          Get a Free Quote
+        </a>
+        <a href="tel:0493038733" class="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-sans font-medium text-sm px-8 py-4 hover:border-white transition-colors">
+          Call 0493 038 733
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

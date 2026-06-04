@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Mulching Sydney — Benji's Gardens | Garden Bed Mulching Hills District, North Shore, Inner West"
+  description="Professional garden mulching across Sydney. Quality mulch applied correctly suppresses weeds, retains moisture, and gives garden beds a premium finished look. Free quote."
+>
+  <section class="bg-ivory py-16 lg:py-24 border-b border-warm-gray">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <a href="/services" class="inline-flex items-center gap-1.5 font-sans text-xs text-charcoal/45 hover:text-charcoal transition-colors mb-6">
+        ← All Services
+      </a>
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Garden Health</p>
+      <h1 class="font-serif text-5xl lg:text-6xl text-charcoal mb-6 max-w-2xl leading-tight">Mulching</h1>
+      <p class="font-sans text-base text-charcoal/65 max-w-xl leading-relaxed">
+        A properly mulched garden looks premium, requires less watering, and stays weed-free for longer. The detail most gardens are missing.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div>
+          <h2 class="font-serif text-3xl text-charcoal mb-4">Why Mulching Matters</h2>
+          <p class="font-sans text-sm text-charcoal/65 leading-relaxed mb-6">
+            Mulch is more than aesthetics — though a freshly mulched garden bed does look exceptional. Applied at the right depth (75–100mm), a good organic mulch suppresses weed germination, regulates soil temperature, reduces water loss, and feeds the soil as it breaks down.
+          </p>
+          <p class="font-sans text-sm text-charcoal/65 leading-relaxed mb-8">
+            The wrong depth either does nothing (too thin) or suffocates plant roots and encourages stem rot (too thick). We apply it correctly, every time.
+          </p>
+          <h2 class="font-serif text-3xl text-charcoal mb-4">What's Included</h2>
+          <ul class="space-y-3 mb-8">
+            {[
+              'Garden bed preparation and edge tidying',
+              'Quality organic mulch supply',
+              'Correct depth application (75–100mm)',
+              'Keeping mulch clear of plant stems',
+              'Clean finish and site cleanup',
+            ].map(item => (
+              <li class="flex items-center gap-2.5 font-sans text-sm text-charcoal/70">
+                <svg class="w-3.5 h-3.5 text-green-deep flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <div class="flex gap-4">
+            <a href="/contact#quote" class="inline-flex items-center gap-2 bg-green-deep text-white font-sans font-medium text-sm px-6 py-3 hover:bg-green-mid transition-colors">
+              Get a Quote
+            </a>
+            <a href="tel:0493038733" class="inline-flex items-center gap-2 border border-warm-gray text-charcoal font-sans font-medium text-sm px-6 py-3 hover:border-green-deep hover:text-green-deep transition-colors">
+              0493 038 733
+            </a>
+          </div>
+        </div>
+        <div class="aspect-[3/4] overflow-hidden">
+          <img
+            src="/images/benji-hedging-federation-house.jpg"
+            alt="Pristine garden beds and hedging at a heritage property — Five Dock, Inner West"
+            class="w-full h-full object-cover"
+            width="700"
+            height="900"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

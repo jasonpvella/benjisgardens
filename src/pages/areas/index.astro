@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Service Areas — Benji's Gardens | Hills District, North Shore & Inner West Sydney"
+  description="Benji's Gardens services Sydney's Hills District, Upper North Shore and Inner West. Expert hedge trimming and garden maintenance across premium Sydney suburbs."
+>
+
+  <section class="bg-ivory py-14 lg:py-20 border-b border-warm-gray">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Where We Work</p>
+      <h1 class="font-serif text-5xl lg:text-6xl text-charcoal mb-6 max-w-2xl leading-tight">Service Areas</h1>
+      <p class="font-sans text-base text-charcoal/65 max-w-xl leading-relaxed">
+        We service three distinct regions across Sydney — each with its own garden character, and each approached on its own terms.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-6">
+        {[
+          {
+            href: '/areas/hills-district',
+            img: '/images/benji-hedging-large-hedge.jpg',
+            region: 'Hills District',
+            suburbs: 'Kenthurst · Dural · Glenorie · Middle Dural · Glenhaven',
+            approach: 'Scale & estate-grade care',
+            desc: 'Large acreage blocks, equestrian estates, and rural-residential properties. The Hills District demands a different scale of operation — large-scale hedging and screening, grounds upkeep across big blocks, and the equipment and capacity to match.',
+          },
+          {
+            href: '/areas/north-shore',
+            img: '/images/benji-hedging-federation-house.jpg',
+            region: 'Upper North Shore',
+            suburbs: 'Killara · Pymble · St Ives · Wahroonga · Gordon · Lindfield · Turramurra',
+            approach: 'Formal, manicured, prestige hedging',
+            desc: 'Large blocks with mature landscaping and formal established hedges. The Upper North Shore is where precise, consistent hedging matters most — the manicured aesthetic is part of the neighbourhood\'s character.',
+          },
+          {
+            href: '/areas/inner-west',
+            img: '/images/benji-hedging-suburban.jpg',
+            region: 'Inner West',
+            suburbs: 'Five Dock · Haberfield · Balmain · Birchgrove · Hunters Hill · Woolwich',
+            approach: 'Heritage sensitivity & precision in compact spaces',
+            desc: 'Federation-era properties and heritage courtyard gardens. The Inner West demands precision in tighter spaces, respect for heritage streetscapes, and a sensitivity to the character of the garden.',
+          },
+        ].map((area, i) => (
+          <a
+            href={area.href}
+            class={`group grid grid-cols-1 lg:grid-cols-2 gap-0 border border-warm-gray overflow-hidden hover:border-green-pale hover:shadow-sm transition-all ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}
+          >
+            <div class="aspect-video lg:aspect-auto overflow-hidden">
+              <img
+                src={area.img}
+                alt={`Garden maintenance and hedging in the ${area.region}, Sydney`}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                width="900"
+                height="600"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-8 lg:p-10 flex flex-col justify-center">
+              <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-2">{area.approach}</p>
+              <h2 class="font-serif text-3xl lg:text-4xl text-charcoal mb-2 group-hover:text-green-deep transition-colors">{area.region}</h2>
+              <p class="font-sans text-xs text-charcoal/40 mb-4 tracking-wide">{area.suburbs}</p>
+              <p class="font-sans text-sm text-charcoal/65 leading-relaxed mb-6">{area.desc}</p>
+              <span class="font-sans text-sm font-medium text-green-deep group-hover:text-green-mid transition-colors">
+                {area.region} details →
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-green-deep py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-4xl text-white mb-4">Not Sure If We Cover Your Suburb?</h2>
+      <p class="font-sans text-base text-white/55 mb-8">Get in touch — if you're close to our service area, we'll let you know.</p>
+      <a href="/contact#quote" class="inline-flex items-center gap-2 bg-brass text-white font-sans font-medium text-sm px-8 py-4 hover:bg-brass-light transition-colors">
+        Get a Free Quote
+      </a>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,141 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Benji's Gardens — Hills District Sydney",
+  "description": "Garden maintenance and hedge trimming specialists serving Kenthurst, Dural, Glenorie, Middle Dural, Glenhaven and surrounding Hills District suburbs.",
+  "telephone": "0493038733",
+  "url": "https://benjisgardens.com.au/areas/hills-district",
+  "areaServed": [
+    { "@type": "City", "name": "Kenthurst" },
+    { "@type": "City", "name": "Dural" },
+    { "@type": "City", "name": "Glenorie" },
+    { "@type": "City", "name": "Middle Dural" },
+    { "@type": "City", "name": "Glenhaven" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "NSW",
+    "addressCountry": "AU"
+  }
+};
+---
+
+<Layout
+  title="Garden Maintenance & Hedging Hills District Sydney — Kenthurst, Dural, Glenhaven | Benji's Gardens"
+  description="Expert garden maintenance and hedge trimming across Sydney's Hills District. Serving Kenthurst, Dural, Glenorie, Glenhaven and Middle Dural. Large acreage and estate-grade care. Free quote."
+  image="/images/benji-hedging-large-hedge.jpg"
+  schema={schema}
+>
+
+  <!-- HERO -->
+  <section class="relative min-h-[60vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/images/hills-district-driveway-hedges.jpg"
+        alt="Curved gravel driveway with shaped hedge row — Hills District acreage estate"
+        class="w-full h-full object-cover"
+        width="1920"
+        height="1080"
+        fetchpriority="high"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-charcoal/88 via-charcoal/60 to-charcoal/15"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-xl">
+        <a href="/areas" class="inline-flex items-center gap-1.5 font-sans text-xs text-white/45 hover:text-white transition-colors mb-6">
+          ← All Areas
+        </a>
+        <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Sydney Service Area</p>
+        <h1 class="font-serif text-5xl sm:text-6xl text-white mb-5 leading-tight">Hills District</h1>
+        <p class="font-sans text-xs text-white/50 mb-6 tracking-wide">Kenthurst · Dural · Glenorie · Middle Dural · Glenhaven</p>
+        <p class="font-sans text-base text-ivory/75 leading-relaxed mb-8">
+          Large acreage blocks and equestrian estates. We bring the equipment, capacity, and expertise to maintain properties at this scale — properly.
+        </p>
+        <a href="/contact#quote" class="inline-flex items-center gap-2 bg-brass text-white font-sans font-medium text-sm px-8 py-4 hover:bg-brass-light transition-colors">
+          Get a Quote for Hills District
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HILLS APPROACH -->
+  <section class="bg-ivory py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img
+            src="/images/hills-district-topiary-spheres.jpg"
+            alt="Sphere topiary beside farmhouse verandah — Hills District acreage"
+            class="w-full h-full object-cover"
+            width="700"
+            height="875"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Our Approach</p>
+          <h2 class="font-serif text-3xl lg:text-4xl text-charcoal mb-6 leading-tight">
+            Estate-Grade Care for Properties That Demand It
+          </h2>
+          <p class="font-sans text-sm text-charcoal/65 leading-relaxed mb-4">
+            The Hills District operates at a different scale. Blocks in Kenthurst, Middle Dural, and Glenhaven are often several acres — with extensive hedging, large screening plantings, and grounds maintenance requirements that smaller operations simply can't handle.
+          </p>
+          <p class="font-sans text-sm text-charcoal/65 leading-relaxed mb-4">
+            We work with the right equipment for large-scale hedging: professional long-reach STIHL trimmers that handle tall screening hedges safely and efficiently. We have the capacity for long-running jobs, and we maintain a reliable schedule that keeps the property in ongoing order.
+          </p>
+          <p class="font-sans text-sm text-charcoal/65 leading-relaxed mb-6">
+            For acreage properties, a care plan is usually the right answer — a scheduled programme of visits that covers hedging, mowing, mulching, and maintenance on a regular basis, so the grounds are always well-maintained.
+          </p>
+          <div class="flex gap-4">
+            <a href="/care-plans" class="inline-flex items-center gap-2 bg-green-deep text-white font-sans font-medium text-sm px-6 py-3 hover:bg-green-mid transition-colors">
+              View Estate Care Plan
+            </a>
+            <a href="/contact#quote" class="inline-flex items-center gap-2 border border-warm-gray text-charcoal font-sans font-medium text-sm px-6 py-3 hover:border-green-deep hover:text-green-deep transition-colors">
+              Get a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBURBS -->
+  <section class="bg-white py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Suburbs We Serve</p>
+        <h2 class="font-serif text-3xl text-charcoal">Hills District Coverage</h2>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        {['Kenthurst', 'Dural', 'Glenorie', 'Middle Dural', 'Glenhaven', 'Annangrove', 'Box Hill', 'Kellyville', 'Rouse Hill', 'Castle Hill', 'Baulkham Hills', 'Cherrybrook'].map(suburb => (
+          <div class="p-4 border border-warm-gray text-center">
+            <p class="font-sans text-sm text-charcoal/70">{suburb}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-charcoal py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-4xl text-white mb-4">Get a Quote for Your Hills District Property</h2>
+      <p class="font-sans text-base text-white/55 mb-8 max-w-lg mx-auto">
+        Tell us about your property and what you need. We'll assess the scope and get back to you same day.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact#quote" class="inline-flex items-center justify-center gap-2 bg-brass text-white font-sans font-medium text-sm px-8 py-4 hover:bg-brass-light transition-colors">
+          Get a Free Quote
+        </a>
+        <a href="tel:0493038733" class="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-sans font-medium text-sm px-8 py-4 hover:border-white transition-colors">
+          Call 0493 038 733
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

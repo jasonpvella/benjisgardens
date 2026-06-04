@@ -1,0 +1,121 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Garden Services Sydney — Benji's Gardens | Hedging, Mowing, Pressure Washing & More"
+  description="Complete garden and property maintenance across Sydney's Hills District, Upper North Shore and Inner West. Hedge trimming, lawn mowing, pressure washing, mulching and garden care plans."
+>
+
+  <!-- HERO -->
+  <section class="bg-ivory py-16 lg:py-24 border-b border-warm-gray">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">What We Offer</p>
+      <h1 class="font-serif text-5xl lg:text-6xl text-charcoal mb-6 max-w-2xl leading-tight">Complete Garden Care</h1>
+      <p class="font-sans text-base text-charcoal/65 max-w-xl leading-relaxed">
+        Specialist hedging is what we're known for — but we provide everything a premium Sydney garden needs, from regular mowing to full maintenance care plans.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="bg-white py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-1">
+        {[
+          {
+            href: '/hedging',
+            img: '/images/benji-hedging-topdown.jpg',
+            label: 'Specialist Service',
+            title: 'Hedge Trimming & Shaping',
+            body: 'Our signature service. Formal buxus, lilly pilly screens, leighton green conifers, murraya panels, camellia screens — every species trimmed at the right time, in the right way. Seasonal reductions, topiary shaping, and overgrown hedge restoration.',
+            includes: ['Formal hedge trimming', 'Seasonal reduction', 'Topiary & shaping', 'Overgrown restoration', 'Screen & privacy hedging'],
+          },
+          {
+            href: '/services/lawn-mowing',
+            img: '/images/benji-hedging-closeup.jpg',
+            label: 'Regular Service',
+            title: 'Lawn Mowing & Edging',
+            body: 'Reliable, professional mowing with clean edging every time. We use quality equipment, take care around garden beds and features, and leave every site clean before we go.',
+            includes: ['Lawn mowing', 'Edge trimming', 'Line trimming around obstacles', 'Site cleanup', 'Clipping removal'],
+          },
+          {
+            href: '/services/mulching',
+            img: '/images/benji-hedging-suburban.jpg',
+            label: 'Garden Health',
+            title: 'Mulching',
+            body: 'Quality mulch applied correctly suppresses weeds, retains soil moisture, and dramatically improves the look of garden beds. We source good-quality mulch and apply it at the right depth.',
+            includes: ['Garden bed preparation', 'Mulch supply & application', 'Weed suppression', 'Soil moisture retention', 'Clean finished appearance'],
+          },
+          {
+            href: '/services/garden-maintenance',
+            img: '/images/benji-hedging-federation-house.jpg',
+            label: 'Comprehensive Care',
+            title: 'Garden Maintenance',
+            body: 'Full-service ongoing garden care covering everything your property needs. Weeding, pruning, seasonal clean-ups, bed maintenance, and the complete upkeep of an immaculate garden.',
+            includes: ['Weeding', 'Shrub & plant pruning', 'Seasonal clean-ups', 'Garden bed maintenance', 'General tidying'],
+          },
+          {
+            href: '/services/pressure-washing',
+            img: '/images/pressure-washing-after-driveway.jpg',
+            label: 'Hard Surface Cleaning',
+            title: 'Pressure Washing',
+            body: 'Driveways, paths, courtyards, and brick pavers restored to clean. Moss, lichen, and years of grime removed in a single visit — the fastest way to transform how a property presents.',
+            includes: ['Brick paver driveways', 'Concrete paths & footpaths', 'Courtyards & entertaining areas', 'Garden paths & steps', 'Retaining walls'],
+          },
+        ].map((service, i) => (
+          <div class={`grid grid-cols-1 lg:grid-cols-2 gap-0 border border-warm-gray overflow-hidden hover:border-green-pale hover:shadow-sm transition-all ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
+            <div class="aspect-video lg:aspect-auto overflow-hidden">
+              <img
+                src={service.img}
+                alt={service.title}
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                width="900"
+                height="600"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-8 lg:p-10 flex flex-col justify-center">
+              <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-3">{service.label}</p>
+              <h2 class="font-serif text-3xl lg:text-4xl text-charcoal mb-4">{service.title}</h2>
+              <p class="font-sans text-sm text-charcoal/65 leading-relaxed mb-6">{service.body}</p>
+              <ul class="space-y-1.5 mb-8">
+                {service.includes.map(item => (
+                  <li class="flex items-center gap-2 font-sans text-sm text-charcoal/70">
+                    <svg class="w-3.5 h-3.5 text-green-deep flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div class="flex gap-4">
+                <a href={service.href} class="inline-flex items-center gap-2 bg-green-deep text-white font-sans font-medium text-sm px-6 py-3 hover:bg-green-mid transition-colors">
+                  Learn More
+                </a>
+                <a href="/contact#quote" class="inline-flex items-center gap-2 border border-warm-gray text-charcoal font-sans font-medium text-sm px-6 py-3 hover:border-green-deep hover:text-green-deep transition-colors">
+                  Get a Quote
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CARE PLANS CTA -->
+  <section class="bg-green-deep py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Ongoing Care</p>
+      <h2 class="font-serif text-4xl lg:text-5xl text-white mb-4">Want Regular Scheduled Care?</h2>
+      <p class="font-sans text-base text-white/55 mb-8 max-w-lg mx-auto">
+        Our Garden Care Plans bundle all of the above into a regular, scheduled visit — so your garden stays in top condition without you having to think about it.
+      </p>
+      <a href="/care-plans" class="inline-flex items-center gap-2 bg-brass text-white font-sans font-medium text-sm px-8 py-4 hover:bg-brass-light transition-colors">
+        Explore Care Plans →
+      </a>
+    </div>
+  </section>
+
+</Layout>

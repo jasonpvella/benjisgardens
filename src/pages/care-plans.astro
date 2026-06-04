@@ -1,0 +1,218 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Garden Care Plans Sydney — Benji's Gardens | Monthly & Fortnightly Garden Maintenance"
+  description="Scheduled garden care plans across Sydney's Hills District, Upper North Shore and Inner West. Monthly Essential, Fortnightly Premium, and bespoke Estate plans. Enquire today."
+>
+
+  <!-- HERO -->
+  <section class="relative py-20 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/images/benji-hedging-large-hedge.jpg"
+        alt="Immaculate hedge maintained on a regular care plan — Benji's Gardens"
+        class="w-full h-full object-cover"
+        width="1920"
+        height="1080"
+        fetchpriority="high"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-green-deep/90"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-5">Ongoing Care</p>
+      <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl text-white mb-6 leading-tight max-w-3xl mx-auto">
+        Garden Care Plans
+      </h1>
+      <p class="font-sans text-base text-white/65 max-w-xl mx-auto leading-relaxed">
+        One arrangement, then forget about it. A scheduled care plan keeps your garden in ongoing premium condition without the friction of re-booking every visit.
+      </p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="bg-ivory py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">How It Works</p>
+      <h2 class="font-serif text-3xl lg:text-4xl text-charcoal mb-10">Simple and Reliable</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        {[
+          { step: '01', title: 'Choose Your Plan', body: 'Pick from Essential, Premium, or Estate — or tell us what your garden needs and we\'ll tailor a schedule.' },
+          { step: '02', title: 'We Set a Schedule', body: 'We agree on a regular visit day that works for you. Monthly or fortnightly, consistent and reliable.' },
+          { step: '03', title: 'We Handle the Rest', body: 'Your garden is maintained on schedule, every time. You don\'t need to call, book, or follow up.' },
+        ].map(item => (
+          <div>
+            <p class="font-sans text-3xl font-medium text-brass mb-3">{item.step}</p>
+            <h3 class="font-serif text-xl text-charcoal mb-2">{item.title}</h3>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section class="bg-white py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Choose Your Plan</p>
+        <h2 class="font-serif text-4xl lg:text-5xl text-charcoal">Three Tiers of Care</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Essential -->
+        <div class="border border-warm-gray p-8">
+          <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-3">Monthly</p>
+          <h3 class="font-serif text-4xl text-charcoal mb-1">Essential</h3>
+          <p class="font-sans text-sm text-charcoal/50 mb-6">One visit per month</p>
+          <div class="w-full h-px bg-warm-gray mb-6"></div>
+          <p class="font-sans text-sm text-charcoal/65 leading-relaxed mb-6">
+            Monthly maintenance to keep your garden tidy, healthy, and in good order. The foundation of a well-cared-for property.
+          </p>
+          <h4 class="font-sans text-xs font-medium uppercase tracking-wider text-charcoal/40 mb-3">Includes</h4>
+          <ul class="space-y-2.5 mb-8">
+            {[
+              'Lawn mowing & edging',
+              'Hedge touch-up trimming',
+              'Weeding of garden beds',
+              'General tidying & cleanup',
+              'Seasonal adjustments',
+            ].map(item => (
+              <li class="flex items-center gap-2 font-sans text-sm text-charcoal/70">
+                <svg class="w-3.5 h-3.5 text-green-deep flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p class="font-sans text-xs text-charcoal/40 italic mb-6">
+            Best for: well-maintained gardens needing regular upkeep.
+          </p>
+          <a href="/contact#quote" class="block text-center bg-white border border-green-deep text-green-deep font-sans font-medium text-sm py-3 hover:bg-green-deep hover:text-white transition-colors">
+            Enquire About Essential
+          </a>
+        </div>
+
+        <!-- Premium -->
+        <div class="bg-green-deep p-8 relative">
+          <div class="absolute top-4 right-4 bg-brass text-white font-sans text-xs font-medium uppercase tracking-wider px-2.5 py-1">
+            Most Popular
+          </div>
+          <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-3">Fortnightly</p>
+          <h3 class="font-serif text-4xl text-white mb-1">Premium</h3>
+          <p class="font-sans text-sm text-white/50 mb-6">Two visits per month</p>
+          <div class="w-full h-px bg-white/15 mb-6"></div>
+          <p class="font-sans text-sm text-white/70 leading-relaxed mb-6">
+            Fortnightly visits for a consistently immaculate garden. More frequent attention means the garden is always in top condition — not just the week after a visit.
+          </p>
+          <h4 class="font-sans text-xs font-medium uppercase tracking-wider text-white/40 mb-3">Includes</h4>
+          <ul class="space-y-2.5 mb-8">
+            {[
+              'Fortnightly mowing & edging',
+              'Regular hedge shaping & trimming',
+              'Weeding & garden bed care',
+              'Mulching top-up (seasonal)',
+              'Shrub & plant pruning',
+              'Full site cleanup each visit',
+            ].map(item => (
+              <li class="flex items-center gap-2 font-sans text-sm text-white/75">
+                <svg class="w-3.5 h-3.5 text-brass flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p class="font-sans text-xs text-white/35 italic mb-6">
+            Best for: homeowners who want a consistently pristine garden.
+          </p>
+          <a href="/contact#quote" class="block text-center bg-brass text-white font-sans font-medium text-sm py-3 hover:bg-brass-light transition-colors">
+            Enquire About Premium
+          </a>
+        </div>
+
+        <!-- Estate -->
+        <div class="border border-warm-gray p-8">
+          <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-3">Bespoke Schedule</p>
+          <h3 class="font-serif text-4xl text-charcoal mb-1">Estate</h3>
+          <p class="font-sans text-sm text-charcoal/50 mb-6">Tailored to your property</p>
+          <div class="w-full h-px bg-warm-gray mb-6"></div>
+          <p class="font-sans text-sm text-charcoal/65 leading-relaxed mb-6">
+            A fully bespoke maintenance programme for large acreage properties, equestrian estates, and gardens with complex maintenance requirements. We visit as often as the property needs.
+          </p>
+          <h4 class="font-sans text-xs font-medium uppercase tracking-wider text-charcoal/40 mb-3">Includes</h4>
+          <ul class="space-y-2.5 mb-8">
+            {[
+              'Bespoke visit schedule',
+              'All mowing & edging',
+              'Full hedging programme',
+              'Complete garden maintenance',
+              'Mulching & seasonal work',
+              'Priority scheduling',
+            ].map(item => (
+              <li class="flex items-center gap-2 font-sans text-sm text-charcoal/70">
+                <svg class="w-3.5 h-3.5 text-green-deep flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p class="font-sans text-xs text-charcoal/40 italic mb-6">
+            Best for: Hills District acreage and large Upper North Shore estates.
+          </p>
+          <a href="/contact#quote" class="block text-center bg-white border border-green-deep text-green-deep font-sans font-medium text-sm py-3 hover:bg-green-deep hover:text-white transition-colors">
+            Discuss Estate Plan
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY A PLAN -->
+  <section class="bg-ivory py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">The Benefit</p>
+        <h2 class="font-serif text-3xl lg:text-4xl text-charcoal">Why a Plan Beats One-Off Bookings</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {[
+          { title: 'No re-booking friction', body: 'The schedule is set once. You don\'t need to call, remember, or follow up.' },
+          { title: 'Consistent results', body: 'Regular visits prevent the garden from getting away on you — and the cumulative result is dramatically better.' },
+          { title: 'Better plant health', body: 'Consistent care at the right intervals is fundamentally better for your plants than sporadic attention.' },
+          { title: 'Priority scheduling', body: 'Plan clients are scheduled first. One-off jobs fill the gaps.' },
+        ].map(item => (
+          <div class="flex gap-4">
+            <div class="w-1 flex-shrink-0 bg-brass self-stretch rounded-full"></div>
+            <div>
+              <h3 class="font-sans text-sm font-medium text-charcoal mb-1">{item.title}</h3>
+              <p class="font-sans text-sm text-charcoal/60 leading-relaxed">{item.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-charcoal py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-4xl text-white mb-4">Ready to Set Up a Care Plan?</h2>
+      <p class="font-sans text-base text-white/55 mb-8 max-w-lg mx-auto">
+        Tell us your suburb, your garden size, and what you're after — we'll recommend the right plan and give you a quote.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact#quote" class="inline-flex items-center justify-center gap-2 bg-brass text-white font-sans font-medium text-sm px-8 py-4 hover:bg-brass-light transition-colors">
+          Get a Care Plan Quote
+        </a>
+        <a href="tel:0493038733" class="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-sans font-medium text-sm px-8 py-4 hover:border-white transition-colors">
+          Call 0493 038 733
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,172 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Benji's Gardens — Inner West Sydney",
+  "description": "Garden maintenance and hedge trimming specialists serving Five Dock, Haberfield, Balmain, Birchgrove, Hunters Hill and surrounding Inner West suburbs.",
+  "telephone": "0493038733",
+  "url": "https://benjisgardens.com.au/areas/inner-west",
+  "areaServed": [
+    { "@type": "City", "name": "Five Dock" },
+    { "@type": "City", "name": "Haberfield" },
+    { "@type": "City", "name": "Balmain" },
+    { "@type": "City", "name": "Birchgrove" },
+    { "@type": "City", "name": "Hunters Hill" },
+    { "@type": "City", "name": "Woolwich" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "NSW",
+    "addressCountry": "AU"
+  }
+};
+---
+
+<Layout
+  title="Garden Maintenance & Hedge Trimming Inner West Sydney — Five Dock, Haberfield, Balmain | Benji's Gardens"
+  description="Expert garden maintenance and hedge trimming in Sydney's Inner West. Serving Five Dock, Haberfield, Balmain, Birchgrove and Hunters Hill. Precision work in heritage Federation gardens. Free quote."
+  image="/images/benji-hedging-federation-house.jpg"
+  schema={schema}
+>
+
+  <!-- HERO -->
+  <section class="relative min-h-[60vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/images/inner-west-jacaranda-heritage.jpg"
+        alt="Heritage home with formal hedging and jacaranda — Haberfield, Inner West Sydney"
+        class="w-full h-full object-cover"
+        width="1920"
+        height="1080"
+        fetchpriority="high"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-charcoal/88 via-charcoal/60 to-charcoal/15"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-xl">
+        <a href="/areas" class="inline-flex items-center gap-1.5 font-sans text-xs text-white/45 hover:text-white transition-colors mb-6">
+          ← All Areas
+        </a>
+        <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Sydney Service Area</p>
+        <h1 class="font-serif text-5xl sm:text-6xl text-white mb-5 leading-tight">Inner West</h1>
+        <p class="font-sans text-xs text-white/50 mb-6 tracking-wide">Five Dock · Haberfield · Balmain · Birchgrove · Hunters Hill · Woolwich</p>
+        <p class="font-sans text-base text-ivory/75 leading-relaxed mb-8">
+          Precision work in heritage Federation gardens and compact prestige courtyards. We know these streets — we work here regularly.
+        </p>
+        <a href="/contact#quote" class="inline-flex items-center gap-2 bg-brass text-white font-sans font-medium text-sm px-8 py-4 hover:bg-brass-light transition-colors">
+          Get a Quote for Inner West
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INNER WEST APPROACH -->
+  <section class="bg-ivory py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div>
+          <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Our Approach</p>
+          <h2 class="font-serif text-3xl lg:text-4xl text-charcoal mb-6 leading-tight">
+            Heritage Gardens Deserve Careful Hands
+          </h2>
+          <p class="font-sans text-sm text-charcoal/65 leading-relaxed mb-4">
+            The Inner West has some of Sydney's most beautiful heritage streetscapes. Federation bungalows in Haberfield, Victorian terrace gardens in Balmain, established harbour-side properties in Hunters Hill and Woolwich. These are gardens with history — compact, design-conscious, and deeply part of their streetscape.
+          </p>
+          <p class="font-sans text-sm text-charcoal/65 leading-relaxed mb-4">
+            Working here means understanding that the scale is different from the acreage work we do in the Hills District. Precision in a smaller space is more demanding, not less — every cut is visible, every line matters, and there's no room to hide sloppy work.
+          </p>
+          <p class="font-sans text-sm text-charcoal/65 leading-relaxed">
+            We've completed multiple jobs in Five Dock, Haberfield and surrounding suburbs. The Federation-era topiary, the formal buxus borders, the tight courtyard hedges — this is work we do well and take seriously.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img
+              src="/images/inner-west-layered-hedge.jpg"
+              alt="Tall lilly pilly over low buxus border — Inner West Sydney"
+              class="w-full h-full object-cover"
+              width="500"
+              height="667"
+              loading="lazy"
+            />
+          </div>
+          <div class="aspect-[3/4] overflow-hidden mt-6">
+            <img
+              src="/images/inner-west-formal-hedge-beds.jpg"
+              alt="Geometric formal hedge beds — Inner West Sydney"
+              class="w-full h-full object-cover"
+              width="500"
+              height="667"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBURBS -->
+  <section class="bg-white py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Suburbs We Serve</p>
+        <h2 class="font-serif text-3xl lg:text-4xl text-charcoal">Inner West Coverage</h2>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        {['Five Dock', 'Haberfield', 'Balmain', 'Birchgrove', 'Hunters Hill', 'Woolwich', 'Drummoyne', 'Leichhardt', 'Rozelle', 'Annandale', 'Lilyfield', 'Abbotsford'].map(suburb => (
+          <div class="p-4 border border-warm-gray text-center">
+            <p class="font-sans text-sm text-charcoal/70">{suburb}</p>
+          </div>
+        ))}
+      </div>
+      <p class="font-sans text-xs text-charcoal/40 text-center mt-4">Not sure if we cover you? <a href="/contact#quote" class="text-green-deep hover:underline">Get in touch</a>.</p>
+    </div>
+  </section>
+
+  <!-- RECENT WORK IN INNER WEST -->
+  <section class="bg-ivory py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Local Work</p>
+      <h2 class="font-serif text-3xl lg:text-4xl text-charcoal mb-8">Recent Inner West Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {[
+          { src: '/images/benji-hedging-federation-house.jpg', alt: 'Heritage hedge trimming Five Dock', caption: 'Formal Lilly Pilly — Five Dock' },
+          { src: '/images/benji-hedging-suburban.jpg', alt: 'Front boundary hedge Five Dock', caption: 'Front Boundary Hedge — Five Dock' },
+          { src: '/images/benji-hedging-topdown.jpg', alt: 'Buxus topiary Five Dock', caption: 'Low Buxus Topiary — Five Dock' },
+        ].map(photo => (
+          <div class="overflow-hidden border border-warm-gray">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src={photo.src} alt={photo.alt} class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" width="600" height="450" loading="lazy" />
+            </div>
+            <div class="px-4 py-3">
+              <p class="font-sans text-xs text-charcoal/50">{photo.caption}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP + CTA -->
+  <section class="bg-charcoal py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Inner West</p>
+      <h2 class="font-serif text-4xl text-white mb-4">Get a Free Quote for Your Inner West Property</h2>
+      <p class="font-sans text-base text-white/55 mb-8 max-w-lg mx-auto">
+        Tell us your suburb, your garden, and what you need. We'll get back to you same day.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact#quote" class="inline-flex items-center justify-center gap-2 bg-brass text-white font-sans font-medium text-sm px-8 py-4 hover:bg-brass-light transition-colors">
+          Get a Free Quote
+        </a>
+        <a href="tel:0493038733" class="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-sans font-medium text-sm px-8 py-4 hover:border-white transition-colors">
+          Call 0493 038 733
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,81 @@
+---
+import '@fontsource/cormorant-garamond/400.css';
+import '@fontsource/cormorant-garamond/500.css';
+import '@fontsource/cormorant-garamond/600.css';
+import '@fontsource/dm-sans/400.css';
+import '@fontsource/dm-sans/500.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  schema?: object;
+}
+
+const {
+  title,
+  description,
+  image = '/images/benji-hedging-large-hedge.jpg',
+  schema,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={canonicalURL} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site).toString()} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+  </head>
+  <body class="font-sans bg-white text-charcoal antialiased">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+
+    <!-- Mobile sticky call bar -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 lg:hidden flex border-t border-green-mid shadow-lg">
+      <a
+        href="tel:0493038733"
+        class="flex-1 flex items-center justify-center gap-2 py-3.5 bg-green-deep text-white font-sans font-medium text-sm"
+      >
+        <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+        0493 038 733
+      </a>
+      <a
+        href="/contact#quote"
+        class="flex-1 flex items-center justify-center py-3.5 bg-brass text-white font-sans font-medium text-sm"
+      >
+        Get a Free Quote
+      </a>
+    </div>
+    <!-- Spacer so content isn't hidden behind sticky bar on mobile -->
+    <div class="h-14 lg:hidden"></div>
+  </body>
+</html>
+
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+</style>

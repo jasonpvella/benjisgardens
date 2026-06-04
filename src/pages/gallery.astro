@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Gallery — Benji's Gardens | Hedge Trimming & Garden Work Sydney"
+  description="Photos of hedge trimming, garden maintenance, and completed projects by Benji's Gardens across Sydney's Hills District, Upper North Shore and Inner West."
+  image="/images/benji-hedging-topdown.jpg"
+>
+
+  <!-- HERO -->
+  <section class="bg-ivory py-14 lg:py-20 border-b border-warm-gray">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Our Work</p>
+      <h1 class="font-serif text-5xl lg:text-6xl text-charcoal mb-4 max-w-2xl leading-tight">Gallery</h1>
+      <p class="font-sans text-base text-charcoal/65 max-w-xl leading-relaxed">
+        A selection of completed work across Sydney. More projects added regularly as jobs are completed.
+      </p>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="bg-charcoal py-12 lg:py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4 text-center">Behind the Work</p>
+      <h2 class="font-serif text-3xl lg:text-4xl text-white mb-8 text-center">See It In Action</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="aspect-video bg-charcoal/50 border border-white/10 overflow-hidden">
+          <video
+            class="w-full h-full object-cover"
+            poster="/images/benji-hedging-large-hedge.jpg"
+            controls
+            preload="none"
+            aria-label="Hedging job video"
+          >
+            <source src="/videos/hedging-job.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="aspect-video bg-charcoal/50 border border-white/10 overflow-hidden">
+          <video
+            class="w-full h-full object-cover"
+            poster="/images/benji-hedging-federation-house.jpg"
+            controls
+            preload="none"
+            aria-label="Garden work video"
+          >
+            <source src="/videos/suzie-video.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEDGING GALLERY -->
+  <section class="bg-white py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Hedging Work</p>
+      <h2 class="font-serif text-3xl lg:text-4xl text-charcoal mb-8">Hedging & Shaping</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {[
+          { src: '/images/north-shore-estate-hedge-wall.jpg', alt: 'Massive leighton green hedge wall with tennis court — Upper North Shore estate', caption: 'Upper North Shore · Leighton Green Hedge Wall' },
+          { src: '/images/north-shore-estate-stepping-stones.jpg', alt: 'Stepping stone path through immaculate formal hedging — Upper North Shore estate', caption: 'Upper North Shore · Formal Estate Garden' },
+          { src: '/images/north-shore-estate-pool-hedge.jpg', alt: 'Pool with terraced formal buxus hedge — Upper North Shore', caption: 'Upper North Shore · Pool Terrace Hedge' },
+          { src: '/images/north-shore-estate-driveway.jpg', alt: 'Formal buxus hedging at a prestigious driveway entrance — Upper North Shore', caption: 'Upper North Shore · Driveway Entrance Hedging' },
+          { src: '/images/inner-west-jacaranda-heritage.jpg', alt: 'Heritage home with formal hedging and jacaranda tree — Haberfield, Inner West', caption: 'Haberfield · Heritage Front Garden' },
+          { src: '/images/inner-west-layered-hedge.jpg', alt: 'Tall lilly pilly screen over low buxus border — Inner West Sydney', caption: 'Inner West · Layered Hedge' },
+          { src: '/images/inner-west-formal-hedge-beds.jpg', alt: 'Geometric formal hedge beds along path — Inner West Sydney', caption: 'Inner West · Formal Hedge Beds' },
+          { src: '/images/hills-district-driveway-hedges.jpg', alt: 'Curved gravel driveway lined with shaped hedges — Hills District acreage', caption: 'Hills District · Acreage Driveway' },
+          { src: '/images/hills-district-circular-hedge.jpg', alt: 'Circular hedge around a tree in paddock — Hills District', caption: 'Hills District · Circular Feature Hedge' },
+          { src: '/images/hills-district-topiary-spheres.jpg', alt: 'Sphere topiary beside a Hills District farmhouse verandah', caption: 'Hills District · Topiary Spheres' },
+          { src: '/images/benji-hedging-federation-house.jpg', alt: 'Tall formal hedge at a heritage Federation property — Five Dock, Inner West', caption: 'Five Dock · Heritage Federation Hedge' },
+          { src: '/images/benji-hedging-topdown.jpg', alt: 'Top-down precision view of low buxus hedge — Five Dock, Inner West', caption: 'Five Dock · Low Buxus Topiary' },
+          { src: '/images/benji-hedging-suburban.jpg', alt: 'Front boundary hedge trimming — Five Dock, Inner West Sydney', caption: 'Five Dock · Front Boundary Hedge' },
+          { src: '/images/benji-hedging-large-hedge.jpg', alt: 'Large formal hedge being trimmed — Five Dock, Inner West Sydney', caption: 'Five Dock · Large Formal Hedge' },
+          { src: '/images/benji-hedging-closeup.jpg', alt: 'Close-up of professional hedge trimming technique — Benji\'s Gardens', caption: 'Five Dock · Hedge Trimming Detail' },
+        ].map(photo => (
+          <div class="group overflow-hidden border border-warm-gray hover:border-green-pale hover:shadow-sm transition-all">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                width="700"
+                height="525"
+                loading="lazy"
+              />
+            </div>
+            <div class="px-4 py-3 bg-white">
+              <p class="font-sans text-xs text-charcoal/50">{photo.caption}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-green-deep py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-3xl lg:text-4xl text-white mb-4">Want Results Like These?</h2>
+      <p class="font-sans text-base text-white/55 mb-8">Get a free quote — we reply same day.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact#quote" class="inline-flex items-center justify-center gap-2 bg-brass text-white font-sans font-medium text-sm px-8 py-4 hover:bg-brass-light transition-colors">
+          Get a Free Quote
+        </a>
+        <a href="/projects" class="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-sans font-medium text-sm px-8 py-4 hover:border-white transition-colors">
+          View Project Details →
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

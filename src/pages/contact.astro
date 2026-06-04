@@ -1,0 +1,275 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact & Free Quote — Benji's Gardens Sydney | Same-Day Response"
+  description="Get a free garden maintenance or hedge trimming quote from Benji's Gardens. Serving Sydney's Hills District, Upper North Shore and Inner West. Same-day response."
+>
+
+  <!-- HEADER -->
+  <section class="bg-ivory py-14 lg:py-20 border-b border-warm-gray">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Get in Touch</p>
+      <h1 class="font-serif text-5xl lg:text-6xl text-charcoal mb-4 leading-tight">Contact Us</h1>
+      <p class="font-sans text-base text-charcoal/65 max-w-lg leading-relaxed">
+        We reply same day — enquire by midday for a quote by evening. No obligation, no sales pressure.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section id="quote" class="bg-white py-14 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+
+        <!-- FORM -->
+        <div class="lg:col-span-3">
+          <h2 class="font-serif text-3xl lg:text-4xl text-charcoal mb-2">Get a Free Quote</h2>
+          <p class="font-sans text-sm text-charcoal/55 mb-8">Fill in your details and we'll be in touch same day.</p>
+
+          <form id="quote-form" class="space-y-5">
+            <!-- Name -->
+            <div>
+              <label for="name" class="block font-sans text-xs font-medium uppercase tracking-wider text-charcoal/50 mb-1.5">Your Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Jane Smith"
+                class="w-full border border-warm-gray px-4 py-3 font-sans text-sm text-charcoal placeholder:text-charcoal/30 focus:outline-none focus:border-green-deep transition-colors"
+              />
+            </div>
+
+            <!-- Phone / Email -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="phone" class="block font-sans text-xs font-medium uppercase tracking-wider text-charcoal/50 mb-1.5">Phone *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="0400 000 000"
+                  class="w-full border border-warm-gray px-4 py-3 font-sans text-sm text-charcoal placeholder:text-charcoal/30 focus:outline-none focus:border-green-deep transition-colors"
+                />
+              </div>
+              <div>
+                <label for="email" class="block font-sans text-xs font-medium uppercase tracking-wider text-charcoal/50 mb-1.5">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="jane@example.com"
+                  class="w-full border border-warm-gray px-4 py-3 font-sans text-sm text-charcoal placeholder:text-charcoal/30 focus:outline-none focus:border-green-deep transition-colors"
+                />
+              </div>
+            </div>
+
+            <!-- Suburb -->
+            <div>
+              <label for="suburb" class="block font-sans text-xs font-medium uppercase tracking-wider text-charcoal/50 mb-1.5">Suburb *</label>
+              <input
+                type="text"
+                id="suburb"
+                name="suburb"
+                required
+                placeholder="e.g. Five Dock, Pymble, Dural"
+                class="w-full border border-warm-gray px-4 py-3 font-sans text-sm text-charcoal placeholder:text-charcoal/30 focus:outline-none focus:border-green-deep transition-colors"
+              />
+            </div>
+
+            <!-- Service -->
+            <div>
+              <label for="service" class="block font-sans text-xs font-medium uppercase tracking-wider text-charcoal/50 mb-1.5">Service Interested In</label>
+              <select
+                id="service"
+                name="service"
+                class="w-full border border-warm-gray px-4 py-3 font-sans text-sm text-charcoal focus:outline-none focus:border-green-deep transition-colors bg-white appearance-none"
+              >
+                <option value="">Select a service (optional)</option>
+                <option value="hedging">Hedge Trimming & Shaping</option>
+                <option value="mowing">Lawn Mowing & Edging</option>
+                <option value="mulching">Mulching</option>
+                <option value="maintenance">Garden Maintenance</option>
+                <option value="care-plan">Garden Care Plan</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label for="message" class="block font-sans text-xs font-medium uppercase tracking-wider text-charcoal/50 mb-1.5">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Tell us about your garden, hedge species, block size, or anything else that's helpful."
+                class="w-full border border-warm-gray px-4 py-3 font-sans text-sm text-charcoal placeholder:text-charcoal/30 focus:outline-none focus:border-green-deep transition-colors resize-none"
+              ></textarea>
+            </div>
+
+            <!-- Photo upload -->
+            <div>
+              <label for="photo" class="block font-sans text-xs font-medium uppercase tracking-wider text-charcoal/50 mb-1.5">
+                Photo
+                <span class="normal-case font-normal text-charcoal/35 ml-1">(optional — helps us give a faster, more accurate estimate)</span>
+              </label>
+              <div class="border border-dashed border-warm-gray p-4 text-center hover:border-green-deep transition-colors cursor-pointer" onclick="document.getElementById('photo').click()">
+                <input type="file" id="photo" name="photo" accept="image/*" class="hidden" />
+                <svg class="w-6 h-6 text-charcoal/25 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                <p class="font-sans text-xs text-charcoal/40">Click to attach a photo of your hedge or garden</p>
+                <p id="file-name" class="font-sans text-xs text-green-deep mt-1 hidden"></p>
+              </div>
+            </div>
+
+            <!-- Submit -->
+            <div>
+              <button
+                type="submit"
+                id="submit-btn"
+                class="w-full bg-brass text-white font-sans font-medium text-sm py-4 hover:bg-brass-light transition-colors flex items-center justify-center gap-2"
+              >
+                Get My Free Quote
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </button>
+              <p class="font-sans text-xs text-charcoal/35 text-center mt-3">
+                We reply same day. Enquire by midday for a quote by evening.
+              </p>
+            </div>
+
+            <!-- Success message (hidden by default) -->
+            <div id="success-msg" class="hidden bg-green-pale border border-green-light px-5 py-4">
+              <p class="font-sans text-sm font-medium text-green-deep">Quote request received!</p>
+              <p class="font-sans text-sm text-green-mid mt-1">We'll be in touch today. If you submitted after midday, expect a reply first thing tomorrow morning.</p>
+            </div>
+
+            <!-- Error message (hidden by default) -->
+            <div id="error-msg" class="hidden bg-red-50 border border-red-200 px-5 py-4">
+              <p class="font-sans text-sm text-red-700">Something went wrong. Please try calling us directly on <a href="tel:0493038733" class="underline">0493 038 733</a>.</p>
+            </div>
+          </form>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="lg:col-span-2 space-y-6">
+
+          <!-- Direct contact -->
+          <div class="bg-ivory p-6 border border-warm-gray">
+            <h3 class="font-serif text-xl text-charcoal mb-4">Prefer to Call?</h3>
+            <a href="tel:0493038733" class="flex items-center gap-3 font-sans text-lg font-medium text-green-deep hover:text-green-mid transition-colors mb-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              0493 038 733
+            </a>
+            <a href="mailto:benjikerkin23@gmail.com" class="flex items-center gap-3 font-sans text-sm text-charcoal/60 hover:text-green-deep transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              benjikerkin23@gmail.com
+            </a>
+          </div>
+
+          <!-- Trust signals -->
+          <div class="p-6 border border-warm-gray space-y-4">
+            <h3 class="font-serif text-xl text-charcoal mb-2">What to Expect</h3>
+            {[
+              { icon: '⏱', title: 'Same-Day Response', body: 'Enquire by midday and receive your quote by evening.' },
+              { icon: '✓', title: 'No Obligation', body: 'A quote is free with no pressure to book.' },
+              { icon: '🛡', title: 'Fully Insured', body: 'Public liability insurance on every job.' },
+              { icon: '✦', title: 'Serving Inner West, North Shore & Hills', body: 'We work regularly in all three regions.' },
+            ].map(item => (
+              <div class="flex gap-3">
+                <span class="text-base flex-shrink-0 mt-0.5">{item.icon}</span>
+                <div>
+                  <p class="font-sans text-sm font-medium text-charcoal">{item.title}</p>
+                  <p class="font-sans text-xs text-charcoal/55 mt-0.5">{item.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <!-- Social proof -->
+          <div class="bg-green-deep p-6">
+            <div class="flex text-brass mb-3">
+              {[...Array(5)].map(() => (
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              ))}
+            </div>
+            <p class="font-serif text-base text-white italic leading-relaxed">
+              "Professional, reliable, and the result speaks for itself."
+            </p>
+            <p class="font-sans text-xs text-white/40 mt-3">— Michelle T., Dural</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  // File input display
+  const fileInput = document.getElementById('photo') as HTMLInputElement;
+  const fileName = document.getElementById('file-name');
+  fileInput?.addEventListener('change', () => {
+    if (fileInput.files && fileInput.files[0] && fileName) {
+      fileName.textContent = fileInput.files[0].name;
+      fileName.classList.remove('hidden');
+    }
+  });
+
+  // Form submission — Firebase will be wired up here
+  const form = document.getElementById('quote-form') as HTMLFormElement;
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+  const successMsg = document.getElementById('success-msg');
+  const errorMsg = document.getElementById('error-msg');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      phone: formData.get('phone'),
+      email: formData.get('email'),
+      suburb: formData.get('suburb'),
+      service: formData.get('service'),
+      message: formData.get('message'),
+      submittedAt: new Date().toISOString(),
+    };
+
+    try {
+      // TODO: Replace with Firebase Firestore submission
+      // import { addDoc, collection } from 'firebase/firestore';
+      // await addDoc(collection(db, 'quotes'), data);
+
+      // Placeholder: log to console until Firebase is connected
+      console.log('Quote submission (Firebase not yet connected):', data);
+
+      // Show success
+      successMsg?.classList.remove('hidden');
+      errorMsg?.classList.add('hidden');
+      form.reset();
+      if (fileName) fileName.classList.add('hidden');
+    } catch (err) {
+      errorMsg?.classList.remove('hidden');
+      successMsg?.classList.add('hidden');
+      console.error('Submission error:', err);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 'Get My Free Quote <svg class="w-4 h-4 inline ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>';
+    }
+  });
+</script>

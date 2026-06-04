@@ -1,0 +1,221 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas does Benji's Gardens service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We service Sydney's Hills District (Kenthurst, Dural, Glenhaven, Glenorie), Upper North Shore (Killara, Pymble, St Ives, Wahroonga, Gordon, Lindfield, Turramurra), and Inner West (Five Dock, Haberfield, Balmain, Birchgrove, Hunters Hill)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Benji's Gardens insured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Benji's Gardens carries full public liability insurance on every job."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly do you respond to quote requests?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We aim to respond same day. Enquire by midday and we'll have your quote by the evening."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer recurring maintenance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — we offer monthly Essential, fortnightly Premium, and bespoke Estate care plans. See our Care Plans page for details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What hedging species do you work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We regularly work with buxus, lilly pilly, leighton green, murraya, camellia, and photinia — the most common formal hedging species in Sydney's premium gardens."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="About Benji's Gardens — Sydney's Hedging Specialists"
+  description="Meet Benji Kerkin — owner of Benji's Gardens, Sydney's dedicated hedging specialists. Fully insured, professional-grade equipment, serving the Hills District, North Shore and Inner West."
+  image="/images/benji-hedging-closeup.jpg"
+  schema={schema}
+>
+
+  <!-- HERO -->
+  <section class="bg-ivory py-14 lg:py-20 border-b border-warm-gray">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">The Story</p>
+      <h1 class="font-serif text-5xl lg:text-6xl text-charcoal mb-6 max-w-2xl leading-tight">About Benji's Gardens</h1>
+      <p class="font-sans text-base text-charcoal/65 max-w-xl leading-relaxed">
+        A Sydney garden maintenance business built on a genuine love of the craft — and an obsession with precise hedging.
+      </p>
+    </div>
+  </section>
+
+  <!-- MEET BENJI -->
+  <section class="bg-white py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="relative">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img
+              src="/images/benji-hedging-closeup.jpg"
+              alt="Benji Kerkin — owner of Benji's Gardens, Sydney hedging specialist"
+              class="w-full h-full object-cover"
+              width="700"
+              height="900"
+              loading="eager"
+            />
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-green-deep text-white px-6 py-4">
+            <p class="font-serif text-lg">Benji Kerkin</p>
+            <p class="font-sans text-xs text-white/60 uppercase tracking-wider mt-0.5">Owner & Hedging Specialist</p>
+          </div>
+        </div>
+        <div>
+          <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">The Person</p>
+          <h2 class="font-serif text-4xl lg:text-5xl text-charcoal mb-6">Meet Benji</h2>
+          <div class="space-y-4 font-sans text-base text-charcoal/65 leading-relaxed">
+            <p>
+              I started Benji's Gardens because I genuinely enjoy the work — and hedging in particular. There's a specific satisfaction in transforming an overgrown, shapeless hedge into something with clean geometry and real presence. It changes how a property reads from the street.
+            </p>
+            <p>
+              I work across Sydney's best neighbourhoods: the large acreage estates of the Hills District, the formal garden suburbs of the Upper North Shore, and the heritage streetscapes of the Inner West. Different contexts require different approaches — an estate-grade screening hedge in Kenthurst is a very different job from shaping a Federation-era buxus border in Haberfield, and I treat them that way.
+            </p>
+            <p>
+              Everything I do is fully insured, done with professional-grade STIHL equipment, and finished with a complete clean-up. I respect that I'm working on people's homes — not just gardens.
+            </p>
+          </div>
+          <div class="mt-8 flex items-center gap-5">
+            <a href="/contact#quote" class="inline-flex items-center gap-2 bg-green-deep text-white font-sans font-medium text-sm px-6 py-3 hover:bg-green-mid transition-colors">
+              Get a Quote
+            </a>
+            <a href="https://www.instagram.com/benjisgardens" target="_blank" rel="noopener noreferrer" class="font-sans text-sm text-charcoal/55 hover:text-green-deep transition-colors">
+              @benjisgardens
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="bg-ivory py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Trust & Standards</p>
+        <h2 class="font-serif text-3xl lg:text-4xl text-charcoal">What You Can Rely On</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          {
+            title: 'Fully Insured',
+            body: 'Public liability insurance on every job. You\'re covered, and so are we.',
+          },
+          {
+            title: 'Professional Equipment',
+            body: 'STIHL long-reach hedge trimmers, PPE maintained to a professional standard. The right tool for every job.',
+          },
+          {
+            title: 'Clean-Site Standard',
+            body: 'Every job ends with a complete cleanup. No clippings on paths, no mess on driveways, no debris left behind.',
+          },
+          {
+            title: 'Reliable Communication',
+            body: 'We confirm appointments, give notice if scheduling changes, and respond to enquiries same day.',
+          },
+        ].map(item => (
+          <div class="p-6 bg-white border border-warm-gray">
+            <div class="w-6 h-0.5 bg-brass mb-4"></div>
+            <h3 class="font-serif text-xl text-charcoal mb-2">{item.title}</h3>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white py-14 lg:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Questions</p>
+        <h2 class="font-serif text-3xl lg:text-4xl text-charcoal">Frequently Asked</h2>
+      </div>
+      <div class="space-y-0 divide-y divide-warm-gray">
+        {[
+          {
+            q: 'What areas do you service?',
+            a: "We cover Sydney's Hills District (Kenthurst, Dural, Glenhaven, Glenorie, Middle Dural), Upper North Shore (Killara, Pymble, St Ives, Wahroonga, Gordon, Lindfield, Turramurra), and Inner West (Five Dock, Haberfield, Balmain, Birchgrove, Hunters Hill, Woolwich). If you're on the boundary, get in touch — we'll let you know.",
+          },
+          {
+            q: 'How quickly do you quote?',
+            a: 'We aim to respond same day. Enquire by midday and we\'ll have your quote by the evening.',
+          },
+          {
+            q: 'Are you insured?',
+            a: 'Yes. Benji\'s Gardens carries full public liability insurance on every job.',
+          },
+          {
+            q: 'Do you do one-off jobs or ongoing maintenance only?',
+            a: 'Both. We do one-off jobs — a single hedge trim, a spring clean-up, a mulching run — and we offer monthly and fortnightly care plans for clients who want ongoing scheduled care.',
+          },
+          {
+            q: 'Can you restore a badly overgrown hedge?',
+            a: 'Often yes, depending on the species and how far it\'s gone. Some species (lilly pilly, murraya) tolerate hard reduction well. Others (leighton green, most conifers) don\'t regenerate from old wood — you can only cut back to where there\'s green. We\'ll assess it honestly and tell you what\'s achievable.',
+          },
+          {
+            q: 'What\'s the best time of year to trim hedges?',
+            a: 'It depends on the species. Most formal hedges are best trimmed in late spring after new growth has hardened, and again in late summer if needed. Buxus should be done when warm spells are coming — not heading into cold. Flowering hedges (camellia, murraya) should be trimmed after flowering. We work to the right schedule for your specific plants.',
+          },
+          {
+            q: 'Do I need to be home when you visit?',
+            a: "Not necessarily — as long as we have access to the garden. Many of our clients aren't home during visits. We'll confirm arrangements when we book.",
+          },
+        ].map((item) => (
+          <details class="group py-5 cursor-pointer">
+            <summary class="flex items-center justify-between gap-4 list-none">
+              <h3 class="font-serif text-xl text-charcoal group-hover:text-green-deep transition-colors">{item.q}</h3>
+              <svg class="w-5 h-5 text-charcoal/40 flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </summary>
+            <p class="font-sans text-sm text-charcoal/65 leading-relaxed mt-3">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-green-deep py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-4xl text-white mb-4">Ready to Work Together?</h2>
+      <p class="font-sans text-base text-white/55 mb-8">Get a free quote — we reply same day.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact#quote" class="inline-flex items-center justify-center gap-2 bg-brass text-white font-sans font-medium text-sm px-8 py-4 hover:bg-brass-light transition-colors">
+          Get a Free Quote
+        </a>
+        <a href="tel:0493038733" class="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-sans font-medium text-sm px-8 py-4 hover:border-white transition-colors">
+          Call 0493 038 733
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

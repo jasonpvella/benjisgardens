@@ -1,0 +1,266 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Recent Projects — Benji's Gardens | Hedge Trimming & Garden Work Sydney"
+  description="Recent completed garden projects by Benji's Gardens across Sydney. Hedge trimming, formal shaping, and garden maintenance in Five Dock, the Hills District and Upper North Shore."
+  image="/images/benji-hedging-federation-house.jpg"
+>
+
+  <!-- HEADER -->
+  <section class="bg-ivory py-14 lg:py-20 border-b border-warm-gray">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">The Work</p>
+      <h1 class="font-serif text-5xl lg:text-6xl text-charcoal mb-4 leading-tight">Recent Projects</h1>
+      <p class="font-sans text-base text-charcoal/65 max-w-xl leading-relaxed">
+        A running record of completed work. Each project is a real job with real photos — no mock-ups or stock imagery.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="bg-white py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Project 1 -->
+        <article class="group border border-warm-gray hover:border-green-pale hover:shadow-sm transition-all overflow-hidden">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img
+              src="/images/benji-hedging-federation-house.jpg"
+              alt="Formal hedge trim at a heritage Federation property — Five Dock, Inner West"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              width="700"
+              height="525"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="font-sans text-xs font-medium uppercase tracking-wider text-brass">Five Dock · Inner West</span>
+            </div>
+            <h2 class="font-serif text-2xl text-charcoal mb-2">Formal Lilly Pilly Hedge — Heritage Property</h2>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed mb-4">
+              Tall lilly pilly screens and formal front hedges at a Federation-era property in Five Dock. The hedges had grown uneven and were overdue for a proper shape. Restored to clean vertical faces and a level top, with the dense growth that makes them effective as privacy screens.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              {['Hedging', 'Lilly Pilly', 'Heritage Property', 'Inner West'].map(tag => (
+                <span class="font-sans text-xs text-charcoal/40 border border-warm-gray px-2 py-0.5">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="group border border-warm-gray hover:border-green-pale hover:shadow-sm transition-all overflow-hidden">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img
+              src="/images/benji-hedging-suburban.jpg"
+              alt="Front boundary hedge trimmed to clean lines — Five Dock, Inner West"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              width="700"
+              height="525"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="font-sans text-xs font-medium uppercase tracking-wider text-brass">Five Dock · Inner West</span>
+            </div>
+            <h2 class="font-serif text-2xl text-charcoal mb-2">Front Boundary Hedge — Precision Trim</h2>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed mb-4">
+              Front boundary hedge trimmed to sharp, level lines on a Five Dock residential property. Clean geometry from the street — the kind of result that frames the property without drawing attention to itself.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              {['Hedging', 'Front Boundary', 'Residential', 'Inner West'].map(tag => (
+                <span class="font-sans text-xs text-charcoal/40 border border-warm-gray px-2 py-0.5">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="group border border-warm-gray hover:border-green-pale hover:shadow-sm transition-all overflow-hidden">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img
+              src="/images/benji-hedging-topdown.jpg"
+              alt="Low buxus hedge shaped to a flat, precise plane — Five Dock"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              width="700"
+              height="525"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="font-sans text-xs font-medium uppercase tracking-wider text-brass">Five Dock · Inner West</span>
+            </div>
+            <h2 class="font-serif text-2xl text-charcoal mb-2">Low Buxus Edging — Courtyard Garden</h2>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed mb-4">
+              Low formal buxus shaped to a flat, even plane in a Five Dock courtyard garden. This is the work that shows in overhead shots — laser-straight lines, uniform height, no gaps in the structure.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              {['Buxus', 'Topiary', 'Courtyard', 'Inner West'].map(tag => (
+                <span class="font-sans text-xs text-charcoal/40 border border-warm-gray px-2 py-0.5">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="group border border-warm-gray hover:border-green-pale hover:shadow-sm transition-all overflow-hidden">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img
+              src="/images/benji-hedging-large-hedge.jpg"
+              alt="Large established hedge trimmed and shaped — Five Dock, Inner West"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              width="700"
+              height="525"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="font-sans text-xs font-medium uppercase tracking-wider text-brass">Five Dock · Inner West</span>
+            </div>
+            <h2 class="font-serif text-2xl text-charcoal mb-2">Large Established Hedge — Full Trim</h2>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed mb-4">
+              A large established hedge on a Five Dock property trimmed back to a defined shape and clean lines. Professional long-reach equipment, STIHL tools, and a full cleanup on completion.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              {['Hedging', 'Large Scale', 'Established', 'Inner West'].map(tag => (
+                <span class="font-sans text-xs text-charcoal/40 border border-warm-gray px-2 py-0.5">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 — North Shore estate -->
+        <article class="group border border-warm-gray hover:border-green-pale hover:shadow-sm transition-all overflow-hidden">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img
+              src="/images/north-shore-estate-hedge-wall.jpg"
+              alt="Massive leighton green hedge wall at an Upper North Shore estate"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              width="700"
+              height="525"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <span class="font-sans text-xs font-medium uppercase tracking-wider text-brass">Upper North Shore</span>
+            <h2 class="font-serif text-2xl text-charcoal mt-1 mb-2">Estate Hedge Wall & Tennis Court Screening</h2>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed mb-4">
+              A large leighton green hedge wall maintained along the full boundary of an Upper North Shore estate, with a lower formal buxus hedge at the base. The result is a layered privacy screen that defines the property at scale.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              {['Leighton Green', 'Buxus', 'Estate', 'North Shore'].map(tag => (
+                <span class="font-sans text-xs text-charcoal/40 border border-warm-gray px-2 py-0.5">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6 — North Shore stepping stone garden -->
+        <article class="group border border-warm-gray hover:border-green-pale hover:shadow-sm transition-all overflow-hidden">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img
+              src="/images/north-shore-estate-stepping-stones.jpg"
+              alt="Stepping stone path through immaculate formal hedging — Upper North Shore"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              width="700"
+              height="525"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <span class="font-sans text-xs font-medium uppercase tracking-wider text-brass">Upper North Shore</span>
+            <h2 class="font-serif text-2xl text-charcoal mt-1 mb-2">Formal Estate Garden — Ongoing Care</h2>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed mb-4">
+              Immaculate formal hedging maintained on both sides of a stepping stone garden path at an Upper North Shore estate. Precise, level geometry throughout — the result of consistent scheduled care.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              {['Formal Hedging', 'Estate', 'Care Plan', 'North Shore'].map(tag => (
+                <span class="font-sans text-xs text-charcoal/40 border border-warm-gray px-2 py-0.5">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 7 — Haberfield Inner West -->
+        <article class="group border border-warm-gray hover:border-green-pale hover:shadow-sm transition-all overflow-hidden">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img
+              src="/images/inner-west-jacaranda-heritage.jpg"
+              alt="Heritage home with formal hedging and jacaranda — Haberfield, Inner West"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              width="700"
+              height="525"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <span class="font-sans text-xs font-medium uppercase tracking-wider text-brass">Haberfield · Inner West</span>
+            <h2 class="font-serif text-2xl text-charcoal mt-1 mb-2">Heritage Front Garden — Formal Hedging</h2>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed mb-4">
+              Formal hedging maintained at a heritage property in Haberfield — sandstone retaining walls, immaculate lawn, and precisely trimmed front hedging that respects the character of the street.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              {['Hedging', 'Heritage', 'Haberfield', 'Inner West'].map(tag => (
+                <span class="font-sans text-xs text-charcoal/40 border border-warm-gray px-2 py-0.5">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 8 — Hills District -->
+        <article class="group border border-warm-gray hover:border-green-pale hover:shadow-sm transition-all overflow-hidden">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img
+              src="/images/hills-district-driveway-hedges.jpg"
+              alt="Curved gravel driveway with shaped hedge row — Hills District acreage"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              width="700"
+              height="525"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <span class="font-sans text-xs font-medium uppercase tracking-wider text-brass">Hills District</span>
+            <h2 class="font-serif text-2xl text-charcoal mt-1 mb-2">Acreage Driveway — Hedge Shaping</h2>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed mb-4">
+              A row of shaped hedges lining a curved gravel driveway on a Hills District acreage property. Uniform height and form across the full length — the kind of scale work that requires the right equipment and a full day on site.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              {['Hedging', 'Acreage', 'Driveway', 'Hills District'].map(tag => (
+                <span class="font-sans text-xs text-charcoal/40 border border-warm-gray px-2 py-0.5">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </article>
+
+        <!-- More coming -->
+        <div class="border border-dashed border-warm-gray flex items-center justify-center min-h-[300px] bg-ivory">
+          <div class="text-center p-8">
+            <p class="font-serif text-2xl text-charcoal/35 mb-2">More Projects</p>
+            <p class="font-sans text-sm text-charcoal/30">New projects added as jobs are completed across Sydney.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-charcoal py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-4xl text-white mb-4">Like What You See?</h2>
+      <p class="font-sans text-base text-white/55 mb-8">Get a free quote for your property — we reply same day.</p>
+      <a href="/contact#quote" class="inline-flex items-center gap-2 bg-brass text-white font-sans font-medium text-sm px-8 py-4 hover:bg-brass-light transition-colors">
+        Get a Free Quote →
+      </a>
+    </div>
+  </section>
+
+</Layout>
