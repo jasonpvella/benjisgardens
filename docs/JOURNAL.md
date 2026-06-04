@@ -4,29 +4,47 @@
 
 ## Executive Snapshot
 
-**Current Focus:** Site is fully built and running locally. Next priority is connecting Firebase (quote form backend) and deploying to Firebase Hosting.
+**Current Focus:** Site is fully built, photos are diversified across all regions, running locally. Next priority is Firebase connection and deployment.
 
 **What's done:**
-- Full Astro 4 + Tailwind 3 site built — 15 pages, all compiling clean
+- Full Astro 4 + Tailwind 3 site — 16 pages, compiling clean
 - Design system: deep botanical green + warm ivory + brass, Cormorant Garamond headings
-- All pages: homepage (12 sections), /hedging, /services (4 sub-pages + pressure washing), /care-plans, /gallery, /projects, /about, /areas (3 regional), /contact
+- All pages: homepage (12 sections), /hedging, /services (5 sub-pages incl. pressure washing), /care-plans, /gallery, /projects, /about, /areas (3 regional), /contact
 - Schema markup: LocalBusiness (homepage + areas), Service (/hedging), FAQPage (/about)
 - SEO: per-page metadata, sitemap.xml, robots.txt, canonical URLs
 - Mobile: fixed header, hamburger menu, sticky bottom call bar
 - Quote form: fully built frontend, Firebase backend placeholder (console.log only)
-- Assets: 26 photos organised by region, 2 videos, logo
-- CLAUDE.md + docs/JOURNAL.md created
+- 26 photos organised by region (Five Dock, Upper North Shore, Inner West, Hills District), 2 videos, logo
+- Homepage now shows a different photo in every section (services grid + recent projects span all 3 regions)
+- CLAUDE.md + docs/JOURNAL.md created, git repo initialised
 
 **Next session — in order:**
 1. Connect Firebase — create project → Firestore + Storage → wire /contact.astro form
 2. Deploy to Firebase Hosting
 3. Fill in ABN once Benji provides it
 4. Add Google Reviews widget (Elfsight or Trustindex) to homepage + contact page
-5. Get before/after photo pairs from Benji (Folder B "before" shots need matching afters)
+5. Get before/after photo pairs from Benji (Folder B "before" shots need matching afters — unlocks homepage slider)
 
 ---
 
 ## Historical Log
+
+### 2026-06-05 (session 2)
+
+**Session summary:** Diversified homepage photos — replaced the repeated Benji action shots in the services grid and recent projects section with the new regional photos. Each section now shows a different property from a different region.
+
+**Decisions made:**
+- Services grid (hedging, mowing, mulching, maintenance): now uses north-shore-estate-driveway, north-shore-mowing-driveway, hills-district-topiary-verandah, inner-west-formal-hedge-beds
+- Recent projects on homepage: now shows one from each region (Upper North Shore estate, Haberfield, Hills District) instead of three Five Dock shots
+- Meet Benji section: kept benji-hedging-closeup.jpg (correct — that section is specifically about Benji)
+
+**What changed:**
+- src/pages/index.astro — services grid photos + recent projects cards updated
+- Git repo initialised, all files committed
+
+**What's next:**
+- Firebase connection (still the main blocker)
+- Benji to provide after photos for Folder B before shots
 
 ### 2026-06-05
 
