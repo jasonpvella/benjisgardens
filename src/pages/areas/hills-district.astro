@@ -103,6 +103,33 @@ const schema = {
     </div>
   </section>
 
+  <!-- GALLERY -->
+  <section class="bg-ivory py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Local Work</p>
+      <h2 class="font-serif text-3xl lg:text-4xl text-charcoal mb-8">Recent Hills District Projects</h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        {[
+          { src: '/images/hills-district-driveway-hedges.jpg', alt: 'Curved gravel driveway lined with shaped hedges — Hills District acreage', caption: 'Acreage Driveway — Hills District' },
+          { src: '/images/hills-district-circular-hedge.jpg', alt: 'Circular hedge feature around a tree — Hills District', caption: 'Circular Hedge Feature — Hills District' },
+          { src: '/images/hills-district-topiary-spheres.jpg', alt: 'Sphere topiary beside farmhouse verandah — Hills District', caption: 'Topiary Spheres — Hills District' },
+          { src: '/images/hills-district-farmhouse.jpg', alt: 'Rural homestead with round-trimmed shrubs — Hills District', caption: 'Farmhouse Garden — Hills District' },
+          { src: '/images/hills-district-topiary-verandah.jpg', alt: 'Topiary beside a Hills District farmhouse verandah', caption: 'Verandah Topiary — Hills District' },
+          { src: '/images/hills-district-topiary-closeup.jpg', alt: 'Sphere topiary detail — Hills District acreage', caption: 'Topiary Detail — Hills District' },
+        ].map(photo => (
+          <div class="overflow-hidden border border-warm-gray">
+            <div class="aspect-square overflow-hidden">
+              <img src={photo.src} alt={photo.alt} class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" width="500" height="500" loading="lazy" />
+            </div>
+            <div class="px-3 py-2.5 bg-white">
+              <p class="font-sans text-xs text-charcoal/50">{photo.caption}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- SUBURBS -->
   <section class="bg-white py-14">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

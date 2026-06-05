@@ -105,6 +105,31 @@ const schema = {
     </div>
   </section>
 
+  <!-- GALLERY -->
+  <section class="bg-ivory py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Local Work</p>
+      <h2 class="font-serif text-3xl lg:text-4xl text-charcoal mb-8">Recent North Shore Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {[
+          { src: '/images/north-shore-estate-hedge-wall.jpg', alt: 'Massive leighton green hedge wall at an Upper North Shore estate', caption: 'Estate Hedge Wall — Upper North Shore' },
+          { src: '/images/north-shore-estate-stepping-stones.jpg', alt: 'Stepping stone path through immaculate formal hedging — Upper North Shore', caption: 'Formal Estate Garden — Upper North Shore' },
+          { src: '/images/north-shore-estate-pool-hedge.jpg', alt: 'Pool with terraced formal buxus hedge — Upper North Shore estate', caption: 'Pool Terrace Hedging — Upper North Shore' },
+          { src: '/images/north-shore-estate-driveway.jpg', alt: 'Formal buxus hedging at a prestigious driveway entrance — Upper North Shore', caption: 'Driveway Entrance — Upper North Shore' },
+        ].map(photo => (
+          <div class="overflow-hidden border border-warm-gray">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src={photo.src} alt={photo.alt} class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" width="800" height="600" loading="lazy" />
+            </div>
+            <div class="px-4 py-3 bg-white">
+              <p class="font-sans text-xs text-charcoal/50">{photo.caption}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- SUBURBS -->
   <section class="bg-white py-14">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

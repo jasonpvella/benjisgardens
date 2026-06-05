@@ -4,19 +4,19 @@
 
 ## Executive Snapshot
 
-**Current Focus:** Site is fully built, photos are diversified across all regions, running locally. Next priority is Firebase connection and deployment.
+**Current Focus:** Site is fully built, all photos swapped to real regional shots throughout. Next priority is Firebase connection and deployment.
 
 **What's done:**
 - Full Astro 4 + Tailwind 3 site — 16 pages, compiling clean
 - Design system: deep botanical green + warm ivory + brass, Cormorant Garamond headings
-- All pages: homepage (12 sections), /hedging, /services (5 sub-pages incl. pressure washing), /care-plans, /gallery, /projects, /about, /areas (3 regional), /contact
-- Schema markup: LocalBusiness (homepage + areas), Service (/hedging), FAQPage (/about)
-- SEO: per-page metadata, sitemap.xml, robots.txt, canonical URLs
-- Mobile: fixed header, hamburger menu, sticky bottom call bar
+- All pages: homepage, /hedging, /services (5 sub-pages incl. pressure washing), /care-plans, /gallery, /projects, /about, /areas (3 regional + hub), /contact
+- All area pages have correct regional photos — no generic Benji action shots anywhere except Meet Benji section
+- /hedging: gallery section removed, full-width layered hedge photo added before CTA
+- Areas hub + all 3 regional pages: correct photos throughout, gallery sections added to Hills District and North Shore
+- Services overview: all section photos updated to regional shots
 - Quote form: fully built frontend, Firebase backend placeholder (console.log only)
-- 26 photos organised by region (Five Dock, Upper North Shore, Inner West, Hills District), 2 videos, logo
-- Homepage now shows a different photo in every section (services grid + recent projects span all 3 regions)
-- CLAUDE.md + docs/JOURNAL.md created, git repo initialised
+- 26 photos organised by region, 2 videos, logo
+- CLAUDE.md + docs/JOURNAL.md, git repo on main branch
 
 **Next session — in order:**
 1. Connect Firebase — create project → Firestore + Storage → wire /contact.astro form
@@ -28,6 +28,29 @@
 ---
 
 ## Historical Log
+
+### 2026-06-05 (session 3)
+
+**Session summary:** Photo polish pass — replaced all remaining generic Benji action shots with correct regional Facebook photos across area pages, services overview, and hedging page.
+
+**Decisions made:**
+- Hedging Gallery section removed entirely — photos added no value over what's elsewhere on the page
+- Full-width `inner-west-layered-hedge.jpg` added before the CTA on /hedging as a cinematic strip
+- Areas hub cards: all three now show correct regional photos
+- Inner West gallery: replaced Five Dock action shots with Haberfield + Inner West Facebook photos
+- Hills District + North Shore: new gallery sections added (were previously only 2 photos each)
+- Services overview: Lawn Mowing → `north-shore-estate-pool-hedge.jpg`, Mulching → `hills-district-topiary-verandah.jpg`, Garden Maintenance → `inner-west-buxus-topdown.jpg`
+
+**What changed:**
+- src/pages/areas/index.astro
+- src/pages/areas/hills-district.astro (gallery section added)
+- src/pages/areas/north-shore.astro (gallery section added)
+- src/pages/areas/inner-west.astro (gallery photos swapped)
+- src/pages/hedging.astro (gallery removed, feature photo added)
+- src/pages/services/index.astro (3 photo swaps)
+
+**What's next:**
+- Firebase connection
 
 ### 2026-06-05 (session 2)
 
