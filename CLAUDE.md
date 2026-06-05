@@ -1,7 +1,7 @@
 # Benji's Gardens — Claude Code Instructions
 
 **Product:** Marketing and lead-generation website for Benji Kerkin's Sydney garden maintenance business, targeting premium residential clients across the Hills District, Upper North Shore, and Inner West.
-**Stack:** Astro 4 (SSG) + Tailwind 3 + Cormorant Garamond/DM Sans (@fontsource) + Firebase (Hosting, Firestore, Storage — pending connection) + static sitemap/robots
+**Stack:** Astro 4 (SSG) + Tailwind 3 + Cormorant Garamond/DM Sans (@fontsource) + Firebase (Hosting live at https://benjis-gardens-au.web.app, Firestore + Storage pending) + static sitemap/robots
 
 ---
 
@@ -23,7 +23,7 @@ Always run `npm run build` after any significant change to confirm zero errors b
 - **Never drop or rename public image files without checking which pages reference them.** Images are referenced by filename across multiple pages — a rename breaks things silently.
 - **No stock photography.** Every image on the site must be a real Benji's Gardens job photo. If a section needs a photo we don't have yet, use the closest real photo available or leave a clearly labelled placeholder.
 - **ABN is pending.** The footer shows `ABN: [pending]` — do not invent or guess an ABN. Leave the placeholder until Jason provides it.
-- **Firebase is not yet connected.** The contact form logs to console only. Do not claim the form is live until Firebase Firestore is wired up.
+- **Firebase Hosting is live** at https://benjis-gardens-au.web.app (project ID: `benjis-gardens-au`). Deploy with `firebase deploy --only hosting`. **Firestore is not yet connected** — the contact form logs to console only. Do not claim the form is live until Firestore is wired up.
 - **Suburb attribution must be accurate.** Only caption photos with suburbs we are confident about. Use "Sydney" or the region name (e.g. "Upper North Shore") when the exact suburb is uncertain.
 
 ---
