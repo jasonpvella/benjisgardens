@@ -4,23 +4,21 @@
 
 ## Executive Snapshot
 
-**Current Focus:** Site is fully built, all photos swapped to real regional shots throughout. Next priority is Firebase connection and deployment.
+**Current Focus:** Site is live on Firebase Hosting. Next priority is connecting a custom domain and wiring up the Firestore contact form.
 
 **What's done:**
 - Full Astro 4 + Tailwind 3 site — 16 pages, compiling clean
 - Design system: deep botanical green + warm ivory + brass, Cormorant Garamond headings
 - All pages: homepage, /hedging, /services (5 sub-pages incl. pressure washing), /care-plans, /gallery, /projects, /about, /areas (3 regional + hub), /contact
 - All area pages have correct regional photos — no generic Benji action shots anywhere except Meet Benji section
-- /hedging: gallery section removed, full-width layered hedge photo added before CTA
-- Areas hub + all 3 regional pages: correct photos throughout, gallery sections added to Hills District and North Shore
-- Services overview: all section photos updated to regional shots
 - Quote form: fully built frontend, Firebase backend placeholder (console.log only)
 - 26 photos organised by region, 2 videos, logo
-- CLAUDE.md + docs/JOURNAL.md, git repo on main branch
+- GitHub repo: https://github.com/jasonpvella/benjisgardens
+- Firebase Hosting live: https://benjis-gardens-au.web.app (project: benjis-gardens-au)
 
 **Next session — in order:**
-1. Connect Firebase — create project → Firestore + Storage → wire /contact.astro form
-2. Deploy to Firebase Hosting
+1. Connect custom domain `benjisgardens.com.au` via Firebase console → Hosting → Add custom domain
+2. Wire /contact.astro form to Firestore
 3. Fill in ABN once Benji provides it
 4. Add Google Reviews widget (Elfsight or Trustindex) to homepage + contact page
 5. Get before/after photo pairs from Benji (Folder B "before" shots need matching afters — unlocks homepage slider)
@@ -28,6 +26,27 @@
 ---
 
 ## Historical Log
+
+### 2026-06-05 (session 4)
+
+**Session summary:** Connected project to GitHub and deployed to Firebase Hosting. Site is now publicly accessible.
+
+**Decisions made:**
+- GitHub repo created as public: https://github.com/jasonpvella/benjisgardens
+- Firebase project created: `benjis-gardens-au`
+- firebase.json configured for static hosting with long-cache headers on assets, no-cache on HTML
+- CLAUDE.md updated to reflect Firebase Hosting is live
+
+**What changed:**
+- firebase.json + .firebaserc created
+- CLAUDE.md updated (stack description + critical rules)
+- All 88 files (16 pages + assets) deployed to Firebase Hosting
+
+**What's next:**
+- Connect custom domain benjisgardens.com.au
+- Wire contact form to Firestore
+
+---
 
 ### 2026-06-05 (session 3)
 
