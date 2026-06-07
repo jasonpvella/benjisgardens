@@ -4,7 +4,7 @@
 
 ## Executive Snapshot
 
-**Current Focus:** Site is fully live at benjisgardens.com.au with SSL. Next priority is wiring up the Firestore contact form.
+**Current Focus:** Homepage polish — tightened layout, new Highend E photos, hero awaiting portrait crop from Benji/Jason. Next priority is wiring the Firestore contact form.
 
 **What's done:**
 - Full Astro 4 + Tailwind 3 site — 16 pages, compiling clean
@@ -12,20 +12,41 @@
 - All pages: homepage, /hedging, /services (5 sub-pages incl. pressure washing), /care-plans, /gallery, /projects, /about, /areas (3 regional + hub), /contact
 - All area pages have correct regional photos — no generic Benji action shots anywhere except Meet Benji section
 - Quote form: fully built frontend, Firebase backend placeholder (console.log only)
-- 26 photos organised by region, 2 videos, logo
+- 30 photos organised by region, 2 videos, logo
 - GitHub repo: https://github.com/jasonpvella/benjisgardens
 - Firebase Hosting live: https://benjisgardens.com.au (project: benjis-gardens-au)
 - Custom domain connected via Vodien DNS — A record → 199.36.158.100, TXT verified, SSL provisioned
 
 **Next session — in order:**
-1. Wire /contact.astro form to Firestore
-2. Fill in ABN once Benji provides it
-3. Add Google Reviews widget (Elfsight or Trustindex) to homepage + contact page
-4. Get before/after photo pairs from Benji (Folder B "before" shots need matching afters — unlocks homepage slider)
+1. **Hero portrait crop** — Jason to export cropped portrait of benji-hedging-federation-house.jpg to disk, overwrite `/public/images/benji-hedging-federation-house.jpg`
+2. Wire /contact.astro form to Firestore
+3. Fill in ABN once Benji provides it
+4. Add Google Reviews widget (Elfsight or Trustindex) to homepage + contact page
+5. Get before/after photo pairs from Benji (Folder B "before" shots need matching afters — unlocks homepage slider)
 
 ---
 
 ## Historical Log
+
+### 2026-06-07 (session 6)
+
+**Session summary:** Homepage polish pass — tighter mobile layout, new Highend E photos throughout What We Do section, hero restructured for full-image mobile display, Recent Projects removed.
+
+**Decisions made:**
+- Hero restructured: on mobile the image now displays at its natural height (no `object-cover` cropping), with text overlaid via bottom gradient. Desktop unchanged. Awaiting portrait crop of `benji-hedging-federation-house.jpg` to replace current landscape version.
+- "What Sets Us Apart" cut from 8 → 6 items (removed "Reliable Communication" and "Local Knowledge" as too generic). Grid changed to 2-col mobile / 3-col desktop. Spacing tightened throughout.
+- "What We Do" expanded from 4 → 5 services (added Pressure Washing). Grid changed to `lg:grid-cols-5`.
+- 4 service photos replaced with Highend E shots: hedge trimming → `576891633...n(1).jpg`, lawn/edging → `576636535...n(1).jpg` (jacaranda + lawn), mulching → `IMG_5721.jpeg`, garden maintenance → `575179465...n.jpg`.
+- Hedging feature text color raised from `white/65` → `white/90` for readability on green background.
+- Recent Projects section removed from homepage entirely.
+
+**What changed:**
+- src/pages/index.astro — hero, What Sets Us Apart, What We Do, hedging feature text, Recent Projects removed
+- public/images/ — 4 new images added: highend-hedge-trimming.jpg, highend-lawn-edging.jpg, highend-mulching.jpg, highend-garden-maintenance.jpg
+
+**What's next:**
+- Jason to export portrait crop of benji-hedging-federation-house.jpg to disk
+- Wire contact form to Firestore
 
 ### 2026-06-08 (session 5)
 
