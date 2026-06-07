@@ -4,7 +4,7 @@
 
 ## Executive Snapshot
 
-**Current Focus:** Site is live on Firebase Hosting. Next priority is connecting a custom domain and wiring up the Firestore contact form.
+**Current Focus:** Site is fully live at benjisgardens.com.au with SSL. Next priority is wiring up the Firestore contact form.
 
 **What's done:**
 - Full Astro 4 + Tailwind 3 site — 16 pages, compiling clean
@@ -14,18 +14,38 @@
 - Quote form: fully built frontend, Firebase backend placeholder (console.log only)
 - 26 photos organised by region, 2 videos, logo
 - GitHub repo: https://github.com/jasonpvella/benjisgardens
-- Firebase Hosting live: https://benjis-gardens-au.web.app (project: benjis-gardens-au)
+- Firebase Hosting live: https://benjisgardens.com.au (project: benjis-gardens-au)
+- Custom domain connected via Vodien DNS — A record → 199.36.158.100, TXT verified, SSL provisioned
 
 **Next session — in order:**
-1. Connect custom domain `benjisgardens.com.au` via Firebase console → Hosting → Add custom domain
-2. Wire /contact.astro form to Firestore
-3. Fill in ABN once Benji provides it
-4. Add Google Reviews widget (Elfsight or Trustindex) to homepage + contact page
-5. Get before/after photo pairs from Benji (Folder B "before" shots need matching afters — unlocks homepage slider)
+1. Wire /contact.astro form to Firestore
+2. Fill in ABN once Benji provides it
+3. Add Google Reviews widget (Elfsight or Trustindex) to homepage + contact page
+4. Get before/after photo pairs from Benji (Folder B "before" shots need matching afters — unlocks homepage slider)
 
 ---
 
 ## Historical Log
+
+### 2026-06-08 (session 5)
+
+**Session summary:** Connected benjisgardens.com.au custom domain to Firebase Hosting. Site is now live at the real URL with SSL.
+
+**Decisions made:**
+- Domain registrar is Vodien — DNS managed via their "DNS Settings - Premium" panel
+- A record changed from 122.201.127.228 (Vodien hosting) to 199.36.158.100 (Firebase)
+- TXT record added via Vodien live chat: `hosting-site=benjis-gardens-au`
+- www CNAME was already pointing to benjisgardens.com.au — no change needed
+- Firebase verified both records and provisioned SSL automatically
+
+**What changed:**
+- CLAUDE.md updated to reflect live domain
+- DNS records updated at Vodien
+
+**What's next:**
+- Wire contact form to Firestore
+
+---
 
 ### 2026-06-05 (session 4)
 
