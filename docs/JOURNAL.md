@@ -4,31 +4,63 @@
 
 ## Executive Snapshot
 
-**Current Focus:** Site is fully live and functional. Contact form wired. Nav trimmed to 5 tabs. Next priorities are ABN, Google Reviews, and before/after photos.
+**Current Focus:** Site fully live, copy cleaned, messaging accurate. Next priorities are ABN, Google Reviews, and before/after photos.
 
 **What's done:**
-- Full Astro 4 + Tailwind 3 site — 16 pages, compiling clean
+- Full Astro 4 + Tailwind 3 site — 15 pages, compiling clean
 - Design system: deep botanical green + warm ivory + brass, Cormorant Garamond headings
-- Nav trimmed to 5 tabs: Home, Hedging, Care Plans, Gallery, Contact (Services + About removed from nav, pages kept for SEO)
-- Areas section removed from nav, footer, and sitemap entirely
+- Nav: 4 tabs — Home, Hedging, Gallery, Contact (Care Plans, Services, About, Areas all removed from nav)
+- Care Plans page deleted entirely; all internal links cleaned up
+- "Same-day quote" promises removed sitewide — replaced with "we'll get back to you the same day"
+- "Same-Day Quotes" → "Free On-Site Quotes — No obligation, no surprises" throughout
+- "Recurring Care Plans" → "Ongoing Seasonal Care" in What Sets Us Apart
 - Contact form live — submissions go to benjikerkin23@gmail.com via Web3Forms (key: c5728b58-eef5-406c-bd71-60bc0028c4bd)
-- Homepage hero: highend-formal-garden.jpg (IMG_4318), headline updated to "Sydney's Hedging, Lawn & Garden Specialists"
+- Homepage hero: highend-formal-garden.jpg (IMG_4318), headline "Sydney's Hedging, Lawn & Garden Specialists"
 - All service photos refreshed with Highend E shots across homepage + services index
-- Gallery refreshed: last 8 replaced with best Highend E picks
+- Gallery refreshed with best Highend E picks
 - 35 photos in public/images/, 2 videos, logo
 - GitHub repo: https://github.com/jasonpvella/benjisgardens
 - Firebase Hosting live: https://benjisgardens.com.au + www.benjisgardens.com.au (both SSL provisioned)
-- www SSL fixed: Vodien CNAME for www updated to benjis-gardens-au.web.app
 
 **Next session — in order:**
 1. Fill in ABN once Benji provides it
-2. Add Google Reviews widget (Elfsight or Trustindex) to homepage + contact page
+2. Add Google Reviews widget (Elfsight or Trustindex) to homepage
 3. Get before/after photo pairs from Benji (Folder B "before" shots need matching afters)
-4. Test contact form end-to-end (submit on live site, confirm email arrives at benjikerkin23@gmail.com)
+4. Test contact form — submit on live site, confirm email arrives at benjikerkin23@gmail.com
 
 ---
 
 ## Historical Log
+
+### 2026-06-10 (session 8)
+
+**Session summary:** Messaging cleanup based on Benji's feedback. Removed all specific same-day quote promises, deleted Care Plans page entirely, updated copy sitewide.
+
+**Decisions made:**
+- "Same-Day Quotes" replaced with "Free On-Site Quotes — No obligation, no surprises" across homepage trust bar, What Sets Us Apart, contact sidebar
+- "Recurring Care Plans" in What Sets Us Apart replaced with "Ongoing Seasonal Care — Regular maintenance tailored to your garden's needs throughout the year"
+- Care Plans page deleted — Benji's current focus is recruiting clients, not selling structured plans
+- Care Plans removed from nav, footer, sitemap, and all internal links across services/lawn-mowing, services/garden-maintenance, services/index
+- All "enquire by midday for a quote by evening" language removed sitewide — replaced with "we'll get back to you the same day"
+- About page hero ("The Story") section removed — added no value
+- Nav now 4 tabs: Home, Hedging, Gallery, Contact
+
+**What changed:**
+- src/pages/care-plans.astro — deleted
+- src/components/Header.astro — Care Plans removed from nav
+- src/components/Footer.astro — Care Plans removed from services list
+- src/pages/index.astro — trust bar, What Sets Us Apart, Care Plans teaser removed
+- src/pages/contact.astro — copy updated, "Same-Day Response" trust signal updated
+- src/pages/services/index.astro — CTA updated
+- src/pages/services/lawn-mowing.astro — care plans callout removed
+- src/pages/services/garden-maintenance.astro — care plans callout updated
+- All pages — "midday/by evening" quote promises replaced sitewide
+- public/sitemap.xml — care-plans URL removed
+
+**What's next:**
+- ABN from Benji
+- Google Reviews widget
+- Before/after photos from Benji
 
 ### 2026-06-10 (session 7)
 
