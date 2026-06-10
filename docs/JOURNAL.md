@@ -4,29 +4,67 @@
 
 ## Executive Snapshot
 
-**Current Focus:** Homepage polish — tightened layout, new Highend E photos, hero awaiting portrait crop from Benji/Jason. Next priority is wiring the Firestore contact form.
+**Current Focus:** Site is fully live and functional. Contact form wired. Nav trimmed to 5 tabs. Next priorities are ABN, Google Reviews, and before/after photos.
 
 **What's done:**
 - Full Astro 4 + Tailwind 3 site — 16 pages, compiling clean
 - Design system: deep botanical green + warm ivory + brass, Cormorant Garamond headings
-- All pages: homepage, /hedging, /services (5 sub-pages incl. pressure washing), /care-plans, /gallery, /projects, /about, /areas (3 regional + hub), /contact
-- All area pages have correct regional photos — no generic Benji action shots anywhere except Meet Benji section
-- Quote form: fully built frontend, Firebase backend placeholder (console.log only)
-- 30 photos organised by region, 2 videos, logo
+- Nav trimmed to 5 tabs: Home, Hedging, Care Plans, Gallery, Contact (Services + About removed from nav, pages kept for SEO)
+- Areas section removed from nav, footer, and sitemap entirely
+- Contact form live — submissions go to benjikerkin23@gmail.com via Web3Forms (key: c5728b58-eef5-406c-bd71-60bc0028c4bd)
+- Homepage hero: highend-formal-garden.jpg (IMG_4318), headline updated to "Sydney's Hedging, Lawn & Garden Specialists"
+- All service photos refreshed with Highend E shots across homepage + services index
+- Gallery refreshed: last 8 replaced with best Highend E picks
+- 35 photos in public/images/, 2 videos, logo
 - GitHub repo: https://github.com/jasonpvella/benjisgardens
-- Firebase Hosting live: https://benjisgardens.com.au (project: benjis-gardens-au)
-- Custom domain connected via Vodien DNS — A record → 199.36.158.100, TXT verified, SSL provisioned
+- Firebase Hosting live: https://benjisgardens.com.au + www.benjisgardens.com.au (both SSL provisioned)
+- www SSL fixed: Vodien CNAME for www updated to benjis-gardens-au.web.app
 
 **Next session — in order:**
-1. **Hero portrait crop** — Jason to export cropped portrait of benji-hedging-federation-house.jpg to disk, overwrite `/public/images/benji-hedging-federation-house.jpg`
-2. Wire /contact.astro form to Firestore
-3. Fill in ABN once Benji provides it
-4. Add Google Reviews widget (Elfsight or Trustindex) to homepage + contact page
-5. Get before/after photo pairs from Benji (Folder B "before" shots need matching afters — unlocks homepage slider)
+1. Fill in ABN once Benji provides it
+2. Add Google Reviews widget (Elfsight or Trustindex) to homepage + contact page
+3. Get before/after photo pairs from Benji (Folder B "before" shots need matching afters)
+4. Test contact form end-to-end (submit on live site, confirm email arrives at benjikerkin23@gmail.com)
 
 ---
 
 ## Historical Log
+
+### 2026-06-10 (session 7)
+
+**Session summary:** Major polish pass + site fully operational. Contact form wired to email, www SSL fixed, nav stripped to 5 tabs, all Highend E photos deployed across homepage/services/gallery.
+
+**Decisions made:**
+- Nav trimmed to Home, Hedging, Care Plans, Gallery, Contact — Services and About removed (pages kept for SEO, About demoted to quiet footer link)
+- Areas section removed entirely from nav, footer, and sitemap
+- Homepage hero swapped to `highend-formal-garden.jpg` (IMG_4318 — formal buxus standards garden) — better mobile display than landscape Benji action shot
+- Hero headline changed to "Sydney's Hedging, Lawn & Garden Specialists"
+- Hero eyebrow label changed from brass to white/75 for readability on photo background
+- Contact form wired via Web3Forms (key c5728b58-eef5-406c-bd71-60bc0028c4bd) — sends to benjikerkin23@gmail.com
+- www.benjisgardens.com.au SSL fixed: Vodien www CNAME updated from benjisgardens.com.au → benjis-gardens-au.web.app, Firebase re-verified
+- About page hero section removed ("The Story / About Benji's Gardens" intro — added no value)
+- Gallery last 8 replaced with Highend E picks; services index photos matched to homepage
+- "What Sets Us Apart" cut from 8 → 6 items, tighter mobile layout
+- Pressure washing added as 5th service card on homepage
+- Recent Projects section removed from homepage
+
+**What changed:**
+- src/components/Header.astro — nav links
+- src/components/Footer.astro — areas removed, About demoted
+- src/pages/index.astro — hero, What Sets Us Apart, What We Do, headline, eyebrow text
+- src/pages/contact.astro — Web3Forms key wired
+- src/pages/about.astro — hero section removed
+- src/pages/services/index.astro — 4 photos updated
+- src/pages/services/mulching.astro — photo updated
+- src/pages/gallery.astro — last 8 photos replaced
+- public/images/ — 9 new Highend E images added
+- public/sitemap.xml — areas URLs removed
+- Vodien DNS + Firebase Hosting — www SSL provisioned
+
+**What's next:**
+- ABN from Benji
+- Google Reviews widget
+- Before/after photo pairs from Benji
 
 ### 2026-06-07 (session 6)
 
