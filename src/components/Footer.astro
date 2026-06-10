@@ -8,11 +8,6 @@ const services = [
   { href: '/care-plans', label: 'Garden Care Plans' },
 ];
 
-const areas = [
-  { href: '/areas/hills-district', label: 'Hills District' },
-  { href: '/areas/north-shore', label: 'Upper North Shore' },
-  { href: '/areas/inner-west', label: 'Inner West' },
-];
 ---
 
 <footer class="bg-charcoal text-white">
@@ -57,22 +52,13 @@ const areas = [
         </ul>
       </div>
 
-      <!-- Areas + Links -->
+      <!-- Company Links -->
       <div>
-        <h3 class="font-sans text-xs font-medium uppercase tracking-widest text-white/35 mb-4">Service Areas</h3>
-        <ul class="space-y-2.5 mb-7">
-          {areas.map(a => (
-            <li>
-              <a href={a.href} class="font-sans text-sm text-white/65 hover:text-brass transition-colors">{a.label}</a>
-            </li>
-          ))}
-        </ul>
         <h3 class="font-sans text-xs font-medium uppercase tracking-widest text-white/35 mb-4">Company</h3>
         <ul class="space-y-2.5">
-          <li><a href="/about" class="font-sans text-sm text-white/65 hover:text-brass transition-colors">About</a></li>
           <li><a href="/gallery" class="font-sans text-sm text-white/65 hover:text-brass transition-colors">Gallery</a></li>
-          <li><a href="/projects" class="font-sans text-sm text-white/65 hover:text-brass transition-colors">Recent Projects</a></li>
           <li><a href="/contact" class="font-sans text-sm text-white/65 hover:text-brass transition-colors">Contact</a></li>
+          <li><a href="/about" class="font-sans text-sm text-white/65 hover:text-brass transition-colors">About</a></li>
         </ul>
       </div>
 

@@ -28,25 +28,24 @@ const schema = {
 >
 
   <!-- HERO -->
-  <!-- Mobile: image at natural height, text overlaid at bottom via gradient -->
-  <!-- Desktop: full-viewport fill with object-cover -->
-  <section class="relative overflow-hidden lg:min-h-screen lg:flex lg:items-center">
-    <img
-      src="/images/benji-hedging-federation-house.jpg"
-      alt="Benji trimming a formal hedge at a heritage property in Five Dock, Inner West Sydney"
-      class="w-full h-auto lg:absolute lg:inset-0 lg:h-full lg:w-full lg:object-cover lg:object-center"
-      fetchpriority="high"
-      loading="eager"
-    />
-    <div class="absolute inset-0 bg-gradient-to-b from-charcoal/10 via-charcoal/40 to-charcoal/90 lg:bg-gradient-to-r lg:from-charcoal/85 lg:via-charcoal/60 lg:to-charcoal/20"></div>
-
-    <div class="absolute bottom-0 left-0 right-0 pb-10 lg:static lg:pb-0 lg:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="relative min-h-[85vh] lg:min-h-screen flex items-end lg:items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/images/highend-formal-garden.jpg"
+        alt="Immaculate formal buxus garden with granite path — Sydney"
+        class="w-full h-full object-cover object-center"
+        fetchpriority="high"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-charcoal/20 via-charcoal/50 to-charcoal/90 lg:bg-gradient-to-r lg:from-charcoal/85 lg:via-charcoal/60 lg:to-charcoal/20"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-32 w-full">
       <div class="max-w-2xl">
-        <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4 lg:mb-5">
+        <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-white/75 mb-4 lg:mb-5">
           Hills District · Upper North Shore · Inner West
         </p>
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-7xl xl:text-8xl text-white leading-[1.05] mb-4 lg:mb-6">
-          Sydney's<br />Hedging<br />Specialists
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-7xl xl:text-7xl text-white leading-[1.05] mb-4 lg:mb-6">
+          Sydney's Hedging,<br />Lawn & Garden<br />Specialists
         </h1>
         <p class="font-serif text-lg lg:text-2xl text-ivory/80 italic mb-6 lg:mb-10 leading-relaxed">
           The final touch your garden deserves.
@@ -227,7 +226,7 @@ const schema = {
         {[
           {
             href: '/hedging',
-            img: '/images/highend-hedge-trimming.jpg',
+            img: '/images/highend-formal-garden.jpg',
             title: 'Hedge Trimming & Shaping',
             body: 'Our specialty. Formal lines, seasonal reductions, species-specific care. From buxus to lilly pilly screens.',
           },

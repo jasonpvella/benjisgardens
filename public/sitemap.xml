@@ -11,9 +11,5 @@
   <url><loc>https://benjisgardens.com.au/gallery/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://benjisgardens.com.au/projects/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://benjisgardens.com.au/about/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://benjisgardens.com.au/areas/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://benjisgardens.com.au/areas/hills-district/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://benjisgardens.com.au/areas/north-shore/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://benjisgardens.com.au/areas/inner-west/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://benjisgardens.com.au/contact/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://benjisgardens.com.au/contact/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
