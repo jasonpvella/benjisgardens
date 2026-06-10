@@ -105,7 +105,7 @@ const schema = {
           <svg class="w-5 h-5 text-green-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
-          <span class="font-sans text-sm font-medium text-charcoal">Same-Day Quotes</span>
+          <span class="font-sans text-sm font-medium text-charcoal">Free On-Site Quotes</span>
         </div>
       </div>
     </div>
@@ -166,9 +166,9 @@ const schema = {
           { icon: '✦', title: 'Hedging Specialists', body: 'We lead with hedging — the most craft-intensive service in garden maintenance. Most teams treat it as an afterthought.' },
           { icon: '✦', title: 'Fully Insured', body: 'Public liability insurance for every job. You\'re protected, and so are we.' },
           { icon: '✦', title: 'Professional-Grade Equipment', body: 'STIHL long-reach trimmers, proper PPE, and tools maintained to a professional standard.' },
-          { icon: '✦', title: 'Same-Day Quotes', body: 'Enquire by midday and receive your quote the same evening. No waiting around.' },
+          { icon: '✦', title: 'Free On-Site Quotes', body: 'No obligation, no surprises. We come to you, assess the job, and give you a clear price before any work begins.' },
           { icon: '✦', title: 'Clean-Site Finish', body: 'Every job ends with a full cleanup. We leave your property exactly as we found it — just with better hedges.' },
-          { icon: '✦', title: 'Recurring Care Plans', body: 'Monthly and fortnightly plans keep your garden in ongoing premium condition without the hassle of re-booking.' },
+          { icon: '✦', title: 'Ongoing Seasonal Care', body: 'Regular maintenance tailored to your garden\'s needs throughout the year.' },
         ].map(item => (
           <div class="p-4 lg:p-5 border border-warm-gray hover:border-green-pale hover:bg-ivory transition-colors">
             <span class="text-brass text-xs mb-2 block">{item.icon}</span>
@@ -279,59 +279,6 @@ const schema = {
     </div>
   </section>
 
-  <!-- CARE PLANS TEASER -->
-  <section class="bg-green-deep py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Ongoing Care</p>
-        <h2 class="font-serif text-4xl lg:text-5xl text-white mb-4">Garden Care Plans</h2>
-        <p class="font-sans text-base text-white/55 max-w-xl mx-auto">
-          One call, then forget about it. A scheduled plan keeps your garden in ongoing premium condition — no re-booking, no chasing.
-        </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 mb-10">
-        {[
-          {
-            name: 'Essential',
-            cadence: 'Monthly',
-            desc: 'Monthly maintenance to keep your garden tidy and healthy. Mowing, edging, and seasonal tidy-up.',
-            for: 'Well-maintained gardens needing regular upkeep.',
-          },
-          {
-            name: 'Premium',
-            cadence: 'Fortnightly',
-            desc: 'Fortnightly visits for a consistently immaculate result. Includes hedging touch-ups and garden health checks.',
-            for: 'Homeowners who want a constantly pristine garden.',
-            featured: true,
-          },
-          {
-            name: 'Estate',
-            cadence: 'Bespoke',
-            desc: 'A tailored schedule for large acreage, estate gardens, and properties with complex maintenance needs.',
-            for: 'Hills District acreage and large Upper North Shore blocks.',
-          },
-        ].map(plan => (
-          <div class={`p-8 ${plan.featured ? 'bg-brass' : 'bg-white/5'}`}>
-            <p class={`font-sans text-xs font-medium uppercase tracking-[0.2em] mb-2 ${plan.featured ? 'text-white/70' : 'text-brass'}`}>{plan.cadence}</p>
-            <h3 class="font-serif text-3xl text-white mb-4">{plan.name}</h3>
-            <p class={`font-sans text-sm leading-relaxed mb-4 ${plan.featured ? 'text-white/80' : 'text-white/55'}`}>{plan.desc}</p>
-            <p class={`font-sans text-xs italic ${plan.featured ? 'text-white/60' : 'text-white/35'}`}>Best for: {plan.for}</p>
-          </div>
-        ))}
-      </div>
-      <div class="text-center">
-        <a
-          href="/care-plans"
-          class="inline-flex items-center gap-2 border border-white/30 text-white font-sans font-medium text-sm px-8 py-4 hover:border-white hover:bg-white/10 transition-colors"
-        >
-          Explore Care Plans
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
 
   <!-- REVIEWS PLACEHOLDER -->
   <section class="bg-ivory py-16 lg:py-24">
