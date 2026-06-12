@@ -12,6 +12,7 @@ interface Props {
   description: string;
   image?: string;
   schema?: object;
+  noindex?: boolean;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
   description,
   image = '/images/benji-hedging-large-hedge.jpg',
   schema,
+  noindex,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -39,6 +41,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:url" content={canonicalURL} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" href="/logo.png" />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   </head>
   <body class="font-sans bg-white text-charcoal antialiased">

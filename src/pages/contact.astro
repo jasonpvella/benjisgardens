@@ -146,12 +146,6 @@ import Layout from '../layouts/Layout.astro';
               </p>
             </div>
 
-            <!-- Success message (hidden by default) -->
-            <div id="success-msg" class="hidden bg-green-pale border border-green-light px-5 py-4">
-              <p class="font-sans text-sm font-medium text-green-deep">Quote request received!</p>
-              <p class="font-sans text-sm text-green-mid mt-1">We'll be in touch today. We aim to get back to you the same day.</p>
-            </div>
-
             <!-- Error message (hidden by default) -->
             <div id="error-msg" class="hidden bg-red-50 border border-red-200 px-5 py-4">
               <p class="font-sans text-sm text-red-700">Something went wrong. Please try calling us directly on <a href="tel:0493038733" class="underline">0493 038 733</a>.</p>
@@ -233,7 +227,6 @@ import Layout from '../layouts/Layout.astro';
   // Form submission — Firebase will be wired up here
   const form = document.getElementById('quote-form') as HTMLFormElement;
   const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
-  const successMsg = document.getElementById('success-msg');
   const errorMsg = document.getElementById('error-msg');
 
   form?.addEventListener('submit', async (e) => {
@@ -250,20 +243,15 @@ import Layout from '../layouts/Layout.astro';
       const result = await response.json();
 
       if (result.success) {
-        successMsg?.classList.remove('hidden');
-        errorMsg?.classList.add('hidden');
-        form.reset();
-        if (fileName) fileName.classList.add('hidden');
+        window.location.href = '/thank-you';
       } else {
         throw new Error(result.message);
       }
     } catch (err) {
       errorMsg?.classList.remove('hidden');
-      successMsg?.classList.add('hidden');
-      console.error('Submission error:', err);
-    } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = 'Get My Free Quote <svg class="w-4 h-4 inline ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>';
+      console.error('Submission error:', err);
     }
   });
 </script>

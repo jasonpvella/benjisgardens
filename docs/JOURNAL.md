@@ -4,33 +4,56 @@
 
 ## Executive Snapshot
 
-**Current Focus:** Site fully live, copy cleaned, messaging accurate. Next priorities are ABN, Google Reviews, and before/after photos.
+**Current Focus:** Google presence buildout. Site is conversion-ready. Benji is setting up Google Business Profile. Jason to set up Search Console. Google Ads on hold until GBP verified + reviews flowing.
 
 **What's done:**
-- Full Astro 4 + Tailwind 3 site — 15 pages, compiling clean
+- Full Astro 4 + Tailwind 3 site — 16 pages, compiling clean
 - Design system: deep botanical green + warm ivory + brass, Cormorant Garamond headings
-- Nav: 4 tabs — Home, Hedging, Gallery, Contact (Care Plans, Services, About, Areas all removed from nav)
-- Care Plans page deleted entirely; all internal links cleaned up
-- "Same-day quote" promises removed sitewide — replaced with "we'll get back to you the same day"
-- "Same-Day Quotes" → "Free On-Site Quotes — No obligation, no surprises" throughout
-- "Recurring Care Plans" → "Ongoing Seasonal Care" in What Sets Us Apart
-- Contact form live — submissions go to benjikerkin23@gmail.com via Web3Forms (key: c5728b58-eef5-406c-bd71-60bc0028c4bd)
-- Homepage hero: highend-formal-garden.jpg (IMG_4318), headline "Sydney's Hedging, Lawn & Garden Specialists"
-- All service photos refreshed with Highend E shots across homepage + services index
-- Gallery refreshed with best Highend E picks
+- Nav: 4 tabs — Home, Hedging, Gallery, Contact
+- Contact form → benjikerkin23@gmail.com via Web3Forms, redirects to /thank-you on success
+- /thank-you page live (noindex) — ready for Google Ads conversion tracking
+- Homepage hero: highend-formal-garden.jpg, headline "Sydney's Hedging, Lawn & Garden Specialists"
 - 35 photos in public/images/, 2 videos, logo
 - GitHub repo: https://github.com/jasonpvella/benjisgardens
 - Firebase Hosting live: https://benjisgardens.com.au + www.benjisgardens.com.au (both SSL provisioned)
+- Google setup playbook drafted — full sequence from GBP → Search Console → Ads
 
 **Next session — in order:**
-1. Fill in ABN once Benji provides it
-2. Add Google Reviews widget (Elfsight or Trustindex) to homepage
-3. Get before/after photo pairs from Benji (Folder B "before" shots need matching afters)
-4. Test contact form — submit on live site, confirm email arrives at benjikerkin23@gmail.com
+1. Benji: complete Google Business Profile setup + verification (benjikerkin23@gmail.com)
+2. Jason: set up Google Search Console + submit sitemap (needs Vodien DNS access)
+3. Fill in ABN once Benji provides it
+4. Add Google Reviews widget to homepage once GBP is live
+5. When Benji has Google Ads account: provide Tag ID (AW-XXXXXXXXXX) → one-line site update to enable conversion tracking
+6. Before/after photo pairs from Benji (Folder B "before" shots need matching afters)
 
 ---
 
 ## Historical Log
+
+### 2026-06-12 (session 9)
+
+**Session summary:** Google presence strategy + conversion tracking setup. Built /thank-you page and wired form redirect. Prepared GBP photo pack and review template for Benji.
+
+**Decisions made:**
+- Benji uses benjikerkin23@gmail.com for Google Business Profile and Google Ads (no need to create a new account)
+- 20 reviews is a suggestion, not a hard launch requirement for ads — start when tracking works and GBP is verified
+- "Same-Day Quotes" in ad copy must be avoided — site says "Free on-site quote" and ad copy must match or Google penalises Quality Score
+- Form success redirects to /thank-you (page-based conversion) rather than inline message — cleaner for Google Ads tracking
+- /thank-you is noindex — conversion page, not a real content page
+- Google Ads tag will be added to Layout.astro once Benji provides the Tag ID (AW-XXXXXXXXXX)
+
+**What changed:**
+- src/layouts/Layout.astro — added `noindex` prop
+- src/pages/thank-you.astro — new page (styled, noindex, links back to homepage)
+- src/pages/contact.astro — form redirects to /thank-you on success; inline success message removed
+- ~/Downloads/BenjisGardens-Google/ — 15 best photos + review request template (sent to Benji, not in repo)
+
+**What's next:**
+- Benji sets up GBP + verification
+- Jason sets up Search Console via Vodien DNS
+- ABN from Benji
+- Reviews widget once GBP is live
+- Google Ads Tag ID → plug into Layout.astro
 
 ### 2026-06-10 (session 8)
 

@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Quote Request Received — Benji's Gardens"
+  description="Your quote request has been received."
+  noindex={true}
+>
+
+  <section class="bg-ivory py-24 lg:py-36 min-h-[60vh] flex items-center">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-12 h-12 rounded-full bg-green-deep flex items-center justify-center mx-auto mb-6">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Quote Request Received</p>
+      <h1 class="font-serif text-4xl lg:text-5xl text-charcoal mb-4 leading-tight">We'll be in touch today.</h1>
+      <p class="font-sans text-base text-charcoal/65 max-w-md mx-auto leading-relaxed mb-10">
+        Thank you for reaching out. We'll review your request and get back to you the same day.
+        If you need to speak with us urgently, call us directly.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="tel:0493038733"
+          class="inline-flex items-center justify-center gap-2 bg-green-deep text-white font-sans font-medium text-sm px-8 py-3.5 hover:bg-green-mid transition-colors"
+        >
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          0493 038 733
+        </a>
+        <a
+          href="/"
+          class="inline-flex items-center justify-center gap-2 border border-warm-gray text-charcoal font-sans font-medium text-sm px-8 py-3.5 hover:border-green-deep hover:text-green-deep transition-colors"
+        >
+          Back to Homepage
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
