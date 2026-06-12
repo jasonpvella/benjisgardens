@@ -4,12 +4,12 @@
 
 ## Executive Snapshot
 
-**Current Focus:** Google presence buildout. Site is conversion-ready. Benji is setting up Google Business Profile. Jason to set up Search Console. Google Ads on hold until GBP verified + reviews flowing.
+**Current Focus:** CMS infrastructure built — awaiting Jason's 3-step setup to activate self-serve editing for sister.
 
 **What's done:**
-- Full Astro 4 + Tailwind 3 site — 16 pages, compiling clean
+- Full Astro 4 + Tailwind 3 site — 18 pages, compiling clean
 - Design system: deep botanical green + warm ivory + brass, Cormorant Garamond headings
-- Nav: 4 tabs — Home, Hedging, Gallery, Contact
+- Nav: 5 tabs — Home, Hedging, Gallery, Journal, Contact
 - Contact form → benjikerkin23@gmail.com via Web3Forms, redirects to /thank-you on success
 - /thank-you page live (noindex) — ready for Google Ads conversion tracking
 - Homepage hero: highend-formal-garden.jpg, headline "Sydney's Hedging, Lawn & Garden Specialists"
@@ -17,18 +17,57 @@
 - GitHub repo: https://github.com/jasonpvella/benjisgardens
 - Firebase Hosting live: https://benjisgardens.com.au + www.benjisgardens.com.au (both SSL provisioned)
 - Google setup playbook drafted — full sequence from GBP → Search Console → Ads
+- Garden Journal (/blog/) live with sample post
+- Decap CMS admin at /admin/ — sister edits via email/password login (no GitHub needed)
+- GitHub Actions workflow at .github/workflows/deploy.yml — auto-deploys to Firebase on every push
+
+**Blocking: 3 setup steps before CMS goes live (Jason to complete):**
+1. Firebase service account → add as `FIREBASE_SERVICE_ACCOUNT_BENJIS_GARDENS_AU` secret in GitHub repo settings
+2. Netlify account: link benjisgardens repo, enable Identity + Git Gateway, invite sister via email
+3. Push this code → GitHub Actions auto-deploys everything
 
 **Next session — in order:**
-1. Benji: complete Google Business Profile setup + verification (benjikerkin23@gmail.com)
-2. Jason: set up Google Search Console + submit sitemap (needs Vodien DNS access)
-3. Fill in ABN once Benji provides it
-4. Add Google Reviews widget to homepage once GBP is live
-5. When Benji has Google Ads account: provide Tag ID (AW-XXXXXXXXXX) → one-line site update to enable conversion tracking
-6. Before/after photo pairs from Benji (Folder B "before" shots need matching afters)
+1. Complete CMS activation (above 3 steps)
+2. Benji: complete Google Business Profile setup + verification (benjikerkin23@gmail.com)
+3. Jason: set up Google Search Console + submit sitemap (needs Vodien DNS access)
+4. Fill in ABN once Benji provides it
+5. Add Google Reviews widget to homepage once GBP is live
+6. When Benji has Google Ads account: provide Tag ID (AW-XXXXXXXXXX) → one-line site update to enable conversion tracking
+7. Before/after photo pairs from Benji (Folder B "before" shots need matching afters)
 
 ---
 
 ## Historical Log
+
+### 2026-06-12 (session 10)
+
+**Session summary:** Built self-serve CMS infrastructure so Jason's sister can edit the site (photos, text, blog posts) without developer involvement. Added Garden Journal blog section and wired GitHub Actions for automatic Firebase deploys.
+
+**Decisions made:**
+- CMS: Decap CMS + Netlify Identity + Git Gateway — sister logs in with email/password at `/admin/`, no GitHub account needed
+- Blog URL: `/blog/` with slug-based posts at `/blog/[slug]/`
+- Blog display name: "Garden Journal" (premium feel), nav label: "Journal"
+- Content storage: Astro content collections — markdown files in `src/content/blog/` (auditable, git-tracked)
+- Auto-deploy: GitHub Actions on push to main → `npm run build` → Firebase Hosting (replaces manual `firebase deploy`)
+- @tailwindcss/typography added for blog post prose rendering
+- Netlify is used only for Identity + Git Gateway auth — Firebase remains the actual host
+
+**What changed:**
+- src/content/config.ts — new Astro content collection schema for blog
+- src/content/blog/welcome-to-the-garden-journal.md — sample first post
+- src/pages/blog/index.astro — Garden Journal listing page
+- src/pages/blog/[...slug].astro — individual post page with prose styling
+- src/components/Header.astro — "Journal" added to nav (5th tab)
+- public/admin/index.html — Decap CMS admin SPA
+- public/admin/config.yml — CMS schema (blog collection + media library)
+- .github/workflows/deploy.yml — GitHub Actions auto-deploy to Firebase
+- tailwind.config.mjs — @tailwindcss/typography plugin added
+- package.json — @tailwindcss/typography dependency added
+
+**What's next:**
+- Jason: Firebase service account secret → GitHub repo settings
+- Jason: Netlify account → link repo → enable Identity + Git Gateway → invite sister
+- Push code → CMS goes live
 
 ### 2026-06-12 (session 9)
 

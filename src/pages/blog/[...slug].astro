@@ -1,0 +1,96 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+---
+
+<Layout
+  title={`${post.data.title} — Benji's Gardens`}
+  description={post.data.description}
+  image={post.data.image}
+>
+
+  <!-- HERO IMAGE -->
+  {post.data.image && (
+    <div class="w-full aspect-[21/9] overflow-hidden">
+      <img
+        src={post.data.image}
+        alt={post.data.title}
+        class="w-full h-full object-cover"
+        fetchpriority="high"
+        loading="eager"
+      />
+    </div>
+  )}
+
+  <!-- POST HEADER -->
+  <section class="bg-ivory border-b border-warm-gray py-12 lg:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <a href="/blog" class="inline-flex items-center gap-1.5 font-sans text-xs font-medium uppercase tracking-[0.15em] text-green-deep/60 hover:text-green-deep transition-colors mb-6">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Garden Journal
+      </a>
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.15em] text-green-deep/60 mb-3">
+        {formatDate(post.data.date)}
+      </p>
+      <h1 class="font-serif text-4xl lg:text-5xl text-charcoal leading-tight">
+        {post.data.title}
+      </h1>
+    </div>
+  </section>
+
+  <!-- POST BODY -->
+  <section class="bg-white py-12 lg:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none
+        prose-headings:font-serif prose-headings:font-normal prose-headings:text-charcoal
+        prose-h2:text-3xl prose-h3:text-2xl
+        prose-p:font-sans prose-p:text-charcoal/80 prose-p:leading-relaxed
+        prose-a:text-green-deep prose-a:no-underline hover:prose-a:underline
+        prose-strong:text-charcoal prose-strong:font-medium
+        prose-ul:font-sans prose-li:text-charcoal/80
+        prose-hr:border-warm-gray
+      ">
+        <Content />
+      </div>
+    </div>
+  </section>
+
+  <!-- BACK + CTA -->
+  <section class="bg-ivory border-t border-warm-gray py-12 lg:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+      <a href="/blog" class="font-sans text-sm font-medium text-green-deep hover:text-green-mid transition-colors inline-flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back to Journal
+      </a>
+      <a href="/contact#quote" class="bg-green-deep hover:bg-green-mid text-white font-sans font-medium text-sm px-6 py-3 transition-colors">
+        Get a Free Quote
+      </a>
+    </div>
+  </section>
+
+</Layout>
+
+<style is:global>
+  .prose img {
+    @apply w-full;
+  }
+</style>

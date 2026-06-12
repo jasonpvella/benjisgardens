@@ -1,0 +1,80 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+---
+
+<Layout
+  title="Garden Journal — Benji's Gardens Sydney"
+  description="Tips, seasonal advice, and job updates from Benji's Gardens — Sydney's hedging and garden maintenance specialists."
+>
+
+  <!-- HEADER -->
+  <section class="bg-ivory py-16 lg:py-24 border-b border-warm-gray">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-green-deep/60 mb-3">
+        Tips · Seasonal Advice · Job Updates
+      </p>
+      <h1 class="font-serif text-4xl lg:text-6xl text-charcoal">Garden Journal</h1>
+    </div>
+  </section>
+
+  <!-- POSTS GRID -->
+  <section class="bg-white py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {posts.length === 0 ? (
+        <p class="font-sans text-charcoal/50 text-sm">No posts yet — check back soon.</p>
+      ) : (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          {posts.map(post => (
+            <a href={`/blog/${post.slug}`} class="group flex flex-col">
+              {post.data.image && (
+                <div class="overflow-hidden mb-5 aspect-[4/3]">
+                  <img
+                    src={post.data.image}
+                    alt={post.data.title}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              )}
+              <p class="font-sans text-xs font-medium uppercase tracking-[0.15em] text-green-deep/60 mb-2">
+                {formatDate(post.data.date)}
+              </p>
+              <h2 class="font-serif text-2xl text-charcoal mb-3 group-hover:text-green-deep transition-colors leading-tight">
+                {post.data.title}
+              </h2>
+              <p class="font-sans text-sm text-charcoal/60 leading-relaxed flex-1">
+                {post.data.description}
+              </p>
+              <span class="mt-4 font-sans text-sm font-medium text-green-deep inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                Read more
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-green-deep py-16 lg:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-3xl lg:text-4xl text-white mb-4">Ready to transform your garden?</h2>
+      <p class="font-serif text-lg text-white/70 italic mb-8">Get in touch for a free quote.</p>
+      <a href="/contact#quote" class="inline-block bg-brass hover:bg-brass-light text-white font-sans font-medium text-sm px-8 py-3.5 transition-colors">
+        Get a Free Quote
+      </a>
+    </div>
+  </section>
+
+</Layout>
