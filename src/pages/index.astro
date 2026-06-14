@@ -1,13 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import site from '../data/site.json';
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Benji's Gardens",
   "description": "Sydney's hedging specialists serving the Hills District, Upper North Shore, and Inner West. Premium garden maintenance, hedge trimming, lawn mowing, and care plans.",
-  "telephone": "0493038733",
-  "email": "benjikerkin23@gmail.com",
+  "telephone": site.phone_href.replace('tel:', ''),
+  "email": site.email,
   "url": "https://benjisgardens.com.au",
   "image": "https://benjisgardens.com.au/images/benji-hedging-large-hedge.jpg",
   "priceRange": "$$",
@@ -61,13 +62,13 @@ const schema = {
             </svg>
           </a>
           <a
-            href="tel:0493038733"
+            href={site.phone_href}
             class="inline-flex items-center justify-center gap-2 border border-white/40 text-white font-sans font-medium text-sm px-8 py-4 hover:border-white hover:bg-white/10 transition-colors"
           >
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
             </svg>
-            0493 038 733
+            {site.phone}
           </a>
         </div>
       </div>
@@ -436,13 +437,13 @@ const schema = {
           </svg>
         </a>
         <a
-          href="tel:0493038733"
+          href={site.phone_href}
           class="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-sans font-medium text-sm px-10 py-4 hover:border-white hover:bg-white/5 transition-colors"
         >
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
           </svg>
-          Call 0493 038 733
+          Call {site.phone}
         </a>
       </div>
     </div>

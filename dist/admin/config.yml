@@ -35,3 +35,66 @@ collections:
       - label: Body
         name: body
         widget: markdown
+
+  - name: settings
+    label: Site Settings & Gallery
+    files:
+      - name: gallery
+        label: Gallery Photos
+        file: src/data/gallery.json
+        format: json
+        fields:
+          - label: Photos
+            name: photos
+            widget: list
+            label_singular: Photo
+            hint: "Add photos here to show them in the Gallery page. Upload new photos using the image picker — they go into the /images folder."
+            fields:
+              - label: Image
+                name: image
+                widget: image
+              - label: Caption
+                name: caption
+                widget: string
+                hint: "Short location description shown under the photo, e.g. Upper North Shore · Pool Terrace Hedge"
+              - label: Alt Text
+                name: alt
+                widget: string
+                hint: "Describe the photo — used for accessibility and SEO. e.g. Formal buxus hedge at pool terrace — Upper North Shore"
+              - label: Category
+                name: category
+                widget: select
+                options:
+                  - label: Hedging & Shaping
+                    value: hedging
+                  - label: Lawn Mowing
+                    value: lawn
+                  - label: Pressure Washing
+                    value: pressure-washing
+                  - label: Garden Maintenance
+                    value: maintenance
+
+      - name: site_settings
+        label: Contact & Business Details
+        file: src/data/site.json
+        format: json
+        fields:
+          - label: Phone Number
+            name: phone
+            widget: string
+            hint: "Display format — e.g. 0493 038 733"
+          - label: Phone Link
+            name: phone_href
+            widget: string
+            hint: "Link format — e.g. tel:0493038733 (no spaces, include tel:)"
+          - label: Email Address
+            name: email
+            widget: string
+          - label: ABN
+            name: abn
+            widget: string
+            hint: "Leave as [pending] until you have your ABN confirmed"
+          - label: Instagram URL
+            name: instagram
+            widget: string
+            hint: "Full URL — e.g. https://www.instagram.com/benjisgardens"

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import site from '../data/site.json';
 ---
 
 <Layout
@@ -148,7 +149,7 @@ import Layout from '../layouts/Layout.astro';
 
             <!-- Error message (hidden by default) -->
             <div id="error-msg" class="hidden bg-red-50 border border-red-200 px-5 py-4">
-              <p class="font-sans text-sm text-red-700">Something went wrong. Please try calling us directly on <a href="tel:0493038733" class="underline">0493 038 733</a>.</p>
+              <p class="font-sans text-sm text-red-700">Something went wrong. Please try calling us directly on <a href={site.phone_href} class="underline">{site.phone}</a>.</p>
             </div>
           </form>
         </div>
@@ -159,17 +160,17 @@ import Layout from '../layouts/Layout.astro';
           <!-- Direct contact -->
           <div class="bg-ivory p-6 border border-warm-gray">
             <h3 class="font-serif text-xl text-charcoal mb-4">Prefer to Call?</h3>
-            <a href="tel:0493038733" class="flex items-center gap-3 font-sans text-lg font-medium text-green-deep hover:text-green-mid transition-colors mb-2">
+            <a href={site.phone_href} class="flex items-center gap-3 font-sans text-lg font-medium text-green-deep hover:text-green-mid transition-colors mb-2">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
               </svg>
-              0493 038 733
+              {site.phone}
             </a>
-            <a href="mailto:benjikerkin23@gmail.com" class="flex items-center gap-3 font-sans text-sm text-charcoal/60 hover:text-green-deep transition-colors">
+            <a href={`mailto:${site.email}`} class="flex items-center gap-3 font-sans text-sm text-charcoal/60 hover:text-green-deep transition-colors">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
-              benjikerkin23@gmail.com
+              {site.email}
             </a>
           </div>
 

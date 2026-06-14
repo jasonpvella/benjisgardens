@@ -1,0 +1,23 @@
+{
+  "photos": [
+    { "image": "/images/north-shore-estate-hedge-wall.jpg", "alt": "Massive leighton green hedge wall with tennis court — Upper North Shore estate", "caption": "Upper North Shore · Leighton Green Hedge Wall", "category": "hedging" },
+    { "image": "/images/north-shore-estate-stepping-stones.jpg", "alt": "Stepping stone path through immaculate formal hedging — Upper North Shore estate", "caption": "Upper North Shore · Formal Estate Garden", "category": "hedging" },
+    { "image": "/images/north-shore-estate-pool-hedge.jpg", "alt": "Pool with terraced formal buxus hedge — Upper North Shore", "caption": "Upper North Shore · Pool Terrace Hedge", "category": "hedging" },
+    { "image": "/images/north-shore-estate-driveway.jpg", "alt": "Formal buxus hedging at a prestigious driveway entrance — Upper North Shore", "caption": "Upper North Shore · Driveway Entrance Hedging", "category": "hedging" },
+    { "image": "/images/inner-west-jacaranda-heritage.jpg", "alt": "Heritage home with formal hedging and jacaranda tree — Haberfield, Inner West", "caption": "Haberfield · Heritage Front Garden", "category": "hedging" },
+    { "image": "/images/inner-west-layered-hedge.jpg", "alt": "Tall lilly pilly screen over low buxus border — Inner West Sydney", "caption": "Inner West · Layered Hedge", "category": "hedging" },
+    { "image": "/images/inner-west-formal-hedge-beds.jpg", "alt": "Geometric formal hedge beds along path — Inner West Sydney", "caption": "Inner West · Formal Hedge Beds", "category": "hedging" },
+    { "image": "/images/highend-formal-garden.jpg", "alt": "Formal garden with clipped buxus standards lining a granite path — Sydney", "caption": "Sydney · Formal Buxus Standards Garden", "category": "hedging" },
+    { "image": "/images/highend-formal-paths.jpg", "alt": "Multi-level formal hedging with stone paths and lawn — Sydney", "caption": "Sydney · Multi-Level Formal Garden", "category": "hedging" },
+    { "image": "/images/highend-lawn-edging.jpg", "alt": "Manicured front lawn and hedging with jacaranda in bloom — Sydney", "caption": "Sydney · Manicured Lawn & Hedging", "category": "hedging" },
+    { "image": "/images/highend-hedge-trimming.jpg", "alt": "Layered formal hedge along rendered wall — Sydney", "caption": "Sydney · Layered Formal Hedge", "category": "hedging" },
+    { "image": "/images/highend-topiary-cones.jpg", "alt": "Ornate formal garden with cone topiaries and buxus spheres — Sydney", "caption": "Sydney · Cone Topiaries & Buxus Spheres", "category": "hedging" },
+    { "image": "/images/highend-buxus-fence.jpg", "alt": "Manicured buxus garden with white picket fence — Sydney", "caption": "Sydney · Buxus Garden", "category": "hedging" },
+    { "image": "/images/highend-garden-maintenance.jpg", "alt": "Garden with buxus spheres and mixed formal plantings — Sydney", "caption": "Sydney · Buxus Spheres Garden", "category": "hedging" },
+    { "image": "/images/highend-buxus-wall.jpg", "alt": "Buxus hedge wave along sandstone garden wall — Sydney", "caption": "Sydney · Buxus Along Sandstone", "category": "hedging" },
+    { "image": "/images/north-shore-mowing-driveway.jpg", "alt": "Clean curved driveway with manicured lawn — North Shore", "caption": "North Shore · Manicured Lawn", "category": "lawn" },
+    { "image": "/images/pressure-washing-before-driveway.jpg", "alt": "Dirty brick paver driveway before pressure washing — Sydney", "caption": "Sydney · Before Pressure Washing", "category": "pressure-washing" },
+    { "image": "/images/pressure-washing-after-driveway.jpg", "alt": "Clean brick paver driveway after pressure washing — Sydney", "caption": "Sydney · After Pressure Washing", "category": "pressure-washing" },
+    { "image": "/images/pressure-washing-after-courtyard.jpg", "alt": "Clean courtyard with hedge after pressure washing — Sydney", "caption": "Sydney · Courtyard After Pressure Washing", "category": "pressure-washing" }
+  ]
+}

@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import galleryData from '../data/gallery.json';
+
+const photos = galleryData.photos;
 ---
 
 <Layout
@@ -51,33 +54,17 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- HEDGING GALLERY -->
+  <!-- PHOTO GRID -->
   <section class="bg-white py-14 lg:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Hedging Work</p>
-      <h2 class="font-serif text-3xl lg:text-4xl text-charcoal mb-8">Hedging & Shaping</h2>
+      <p class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-brass mb-4">Our Work</p>
+      <h2 class="font-serif text-3xl lg:text-4xl text-charcoal mb-8">Completed Jobs</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {[
-          { src: '/images/north-shore-estate-hedge-wall.jpg', alt: 'Massive leighton green hedge wall with tennis court — Upper North Shore estate', caption: 'Upper North Shore · Leighton Green Hedge Wall' },
-          { src: '/images/north-shore-estate-stepping-stones.jpg', alt: 'Stepping stone path through immaculate formal hedging — Upper North Shore estate', caption: 'Upper North Shore · Formal Estate Garden' },
-          { src: '/images/north-shore-estate-pool-hedge.jpg', alt: 'Pool with terraced formal buxus hedge — Upper North Shore', caption: 'Upper North Shore · Pool Terrace Hedge' },
-          { src: '/images/north-shore-estate-driveway.jpg', alt: 'Formal buxus hedging at a prestigious driveway entrance — Upper North Shore', caption: 'Upper North Shore · Driveway Entrance Hedging' },
-          { src: '/images/inner-west-jacaranda-heritage.jpg', alt: 'Heritage home with formal hedging and jacaranda tree — Haberfield, Inner West', caption: 'Haberfield · Heritage Front Garden' },
-          { src: '/images/inner-west-layered-hedge.jpg', alt: 'Tall lilly pilly screen over low buxus border — Inner West Sydney', caption: 'Inner West · Layered Hedge' },
-          { src: '/images/inner-west-formal-hedge-beds.jpg', alt: 'Geometric formal hedge beds along path — Inner West Sydney', caption: 'Inner West · Formal Hedge Beds' },
-          { src: '/images/highend-formal-garden.jpg', alt: 'Formal garden with clipped buxus standards lining a granite path — Sydney', caption: 'Sydney · Formal Buxus Standards Garden' },
-          { src: '/images/highend-formal-paths.jpg', alt: 'Multi-level formal hedging with stone paths and lawn — Sydney', caption: 'Sydney · Multi-Level Formal Garden' },
-          { src: '/images/highend-lawn-edging.jpg', alt: 'Manicured front lawn and hedging with jacaranda in bloom — Sydney', caption: 'Sydney · Manicured Lawn & Hedging' },
-          { src: '/images/highend-hedge-trimming.jpg', alt: 'Layered formal hedge along rendered wall — Sydney', caption: 'Sydney · Layered Formal Hedge' },
-          { src: '/images/highend-topiary-cones.jpg', alt: 'Ornate formal garden with cone topiaries and buxus spheres — Sydney', caption: 'Sydney · Cone Topiaries & Buxus Spheres' },
-          { src: '/images/highend-buxus-fence.jpg', alt: 'Manicured buxus garden with white picket fence — Sydney', caption: 'Sydney · Buxus Garden' },
-          { src: '/images/highend-garden-maintenance.jpg', alt: 'Garden with buxus spheres and mixed formal plantings — Sydney', caption: 'Sydney · Buxus Spheres Garden' },
-          { src: '/images/highend-buxus-wall.jpg', alt: 'Buxus hedge wave along sandstone garden wall — Sydney', caption: 'Sydney · Buxus Along Sandstone' },
-        ].map(photo => (
+        {photos.map(photo => (
           <div class="group overflow-hidden border border-warm-gray hover:border-green-pale hover:shadow-sm transition-all">
             <div class="aspect-[4/3] overflow-hidden">
               <img
-                src={photo.src}
+                src={photo.image}
                 alt={photo.alt}
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 width="700"
