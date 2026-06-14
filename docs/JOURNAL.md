@@ -4,7 +4,7 @@
 
 ## Executive Snapshot
 
-**Current Focus:** CMS infrastructure built — awaiting Jason's 3-step setup to activate self-serve editing for sister.
+**Current Focus:** CMS fully built — awaiting Jason's 2-step Netlify + Firebase setup to activate self-serve editing for Suzie and Benji.
 
 **What's done:**
 - Full Astro 4 + Tailwind 3 site — 18 pages, compiling clean
@@ -18,26 +18,54 @@
 - Firebase Hosting live: https://benjisgardens.com.au + www.benjisgardens.com.au (both SSL provisioned)
 - Google setup playbook drafted — full sequence from GBP → Search Console → Ads
 - Garden Journal (/blog/) live with sample post
-- Decap CMS admin at /admin/ — sister edits via email/password login (no GitHub needed)
-- GitHub Actions workflow at .github/workflows/deploy.yml — auto-deploys to Firebase on every push
+- Decap CMS admin at /admin/ — Suzie and Benji log in with email/password (no GitHub needed)
+- GitHub Actions auto-deploy: .github/workflows/deploy.yml — deploys to Firebase on every push
+- Gallery fully CMS-managed: src/data/gallery.json — add/remove/caption photos via /admin
+- Site settings CMS-managed: src/data/site.json — phone, email, ABN, Instagram editable via /admin
+- Contact info centralised: Footer, Layout, index, contact pages all read from site.json
 
-**Blocking: 3 setup steps before CMS goes live (Jason to complete):**
+**Blocking: 2 setup steps before CMS goes live (Jason to complete):**
 1. Firebase service account → add as `FIREBASE_SERVICE_ACCOUNT_BENJIS_GARDENS_AU` secret in GitHub repo settings
-2. Netlify account: link benjisgardens repo, enable Identity + Git Gateway, invite sister via email
-3. Push this code → GitHub Actions auto-deploys everything
+2. Netlify: create account → link benjisgardens repo → enable Identity + Git Gateway → invite Suzie + Benji via email
 
 **Next session — in order:**
-1. Complete CMS activation (above 3 steps)
+1. Complete CMS activation (above 2 steps) — then Suzie/Benji self-sufficient
 2. Benji: complete Google Business Profile setup + verification (benjikerkin23@gmail.com)
 3. Jason: set up Google Search Console + submit sitemap (needs Vodien DNS access)
-4. Fill in ABN once Benji provides it
+4. Fill in ABN via CMS once Benji provides it
 5. Add Google Reviews widget to homepage once GBP is live
-6. When Benji has Google Ads account: provide Tag ID (AW-XXXXXXXXXX) → one-line site update to enable conversion tracking
+6. When Benji has Google Ads account: provide Tag ID (AW-XXXXXXXXXX) → one-line site update
 7. Before/after photo pairs from Benji (Folder B "before" shots need matching afters)
 
 ---
 
 ## Historical Log
+
+### 2026-06-14 (session 11)
+
+**Session summary:** Expanded Decap CMS to cover gallery and site-wide contact details. Suzie and Benji can now manage blog posts, gallery photos, and contact info entirely from /admin — no developer involvement needed for day-to-day updates.
+
+**Decisions made:**
+- Gallery extracted from hardcoded array in gallery.astro → src/data/gallery.json (19 photos with image, alt, caption, category fields)
+- Site contact info (phone, email, ABN, Instagram) extracted to src/data/site.json — single source of truth used across Footer, Layout mobile bar, homepage, and contact page
+- CMS config now has 3 collections: Blog Posts, Gallery Photos, Contact & Business Details
+- Gallery page simplified to a single grid (no hardcoded section headers) — all photos from JSON
+- Discussed Decap CMS vs Sanity: Decap chosen for its git-backed simplicity; Sanity revisit warranted only if editing scope grows to full page copy
+
+**What changed:**
+- src/data/site.json — new (phone, email, ABN, instagram)
+- src/data/gallery.json — new (19 gallery photos)
+- src/pages/gallery.astro — rewrote to import gallery.json
+- src/components/Footer.astro — imports site.json for phone/email
+- src/layouts/Layout.astro — imports site.json for mobile sticky bar phone
+- src/pages/index.astro — imports site.json for hero phone buttons + schema.org
+- src/pages/contact.astro — imports site.json for sidebar phone/email
+- public/admin/config.yml — gallery + site_settings file collections added
+
+**What's next:**
+- Jason: Firebase service account secret → GitHub repo settings
+- Jason: Netlify account → link repo → enable Identity + Git Gateway → invite Suzie + Benji
+- Once active: Suzie/Benji fully self-sufficient for blog, gallery, contact updates
 
 ### 2026-06-12 (session 10)
 
